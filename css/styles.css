@@ -1,0 +1,983 @@
+/* Project Card Styles (for boarding-schools.html Cobham Hall card) */
+.project-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--white);
+    padding: 2rem;
+}
+
+.project-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-season {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.project-body {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.project-highlights {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.project-highlights li {
+    padding: 0.4rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.project-highlights li:before {
+    content: "★ ";
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.project-duration {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.btn-detail {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+    background-color: var(--primary-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #3b82f6;
+    --accent-color: #fbbf24;
+    --text-color: #1f2937;
+    --light-bg: #f9fafb;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Sora', 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.logo-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+}
+
+.logo h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    font-family: 'Sora', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+.consultation-btn-header {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.consultation-btn-header:hover {
+    background-color: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+
+
+.hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 2;
+    display: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    color: var(--white);
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button:hover {
+    background-color: #f59e0b;
+    transform: translateY(-3px);
+    box-shadow: 0 25px 35px rgba(251, 191, 36, 0.4);
+}
+
+/* 服务部分 */
+.services {
+    padding: 5rem 2rem;
+    background-color: #fafbff;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.services-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    grid-column: 1 / -1;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card.highlight {
+    border: 2px solid var(--accent-color);
+    position: relative;
+    top: -10px;
+}
+
+.service-category {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+
+
+.service-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.service-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.service-card li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.service-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* 咨询部分 */
+.consultation {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.consultation-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.consultation-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.consultation-container p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.consultation-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #f59e0b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* 优势部分 */
+.advantages {
+    padding: 5rem 2rem;
+    background-color: #f8f9ff;
+}
+
+.advantages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantages-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.advantage-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e7ff;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.advantage-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.advantage-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.advantage-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 我们的服务部分 */
+.our-services {
+    padding: 5rem 2rem;
+    background-color: #fafbff;
+}
+
+.our-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.our-services-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-item.highlight-service {
+    border: 2px solid var(--accent-color);
+}
+
+.service-number {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.service-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 成功案例部分 */
+.cases {
+    padding: 5rem 2rem;
+    background-color: #f8f9ff;
+}
+
+.cases-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cases-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.case-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.case-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.case-age {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.case-type {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+
+.case-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.case-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.case-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: var(--secondary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+/* 关于我们部分 */
+.about {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.about-highlights {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.highlight-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.highlight-item p {
+    margin: 0;
+    color: #666;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.stat-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* 页脚 */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+/* 模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: var(--shadow-lg);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--primary-color);
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+}
+
+.btn-submit {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .logo {
+        gap: 0.7rem;
+    }
+
+    .logo-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-container h2,
+    .advantages-container h2,
+    .our-services-container h2,
+    .cases-container h2,
+    .about-container h2 {
+        font-size: 2rem;
+    }
+
+    .consultation-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .consultation-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        gap: 0.4rem;
+    }
+
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .consultation-btn-header {
+        padding: 0.5rem 1rem;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .services {
+        padding: 3rem 1rem;
+    }
+
+    .advantages {
+        padding: 3rem 1rem;
+    }
+
+    .our-services {
+        padding: 3rem 1rem;
+    }
+
+    .cases {
+        padding: 3rem 1rem;
+    }
+
+    .about {
+        padding: 3rem 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+        padding: 1.5rem;
+    }
+}

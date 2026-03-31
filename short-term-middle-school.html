@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中小学生项目 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .projects-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .projects-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+        }
+        
+        .project-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-season {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .project-body {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+        
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-highlights li {
+            padding: 0.4rem 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .project-highlights li:before {
+            content: "★ ";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+        
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .project-duration {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .btn-detail {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-detail:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="short-term-details.html">短期游学</a> > 
+            <span>中小学生项目</span>
+        </div>
+    </div>
+
+    <!-- 项目列表 -->
+    <section class="projects-section">
+        <div class="projects-container">
+            <a href="short-term-details.html" class="back-link">← 返回短期游学</a>
+            
+            <h2>中小学生项目</h2>
+            <p class="projects-subtitle">为7–18岁中小学生设计的沉浸式英国教育体验</p>
+            
+            <div class="projects-grid">
+                <!-- 项目 1：哈罗公学夏校 -->
+                <div class="project-card highlight" style="cursor: pointer;" onclick="window.location.href='harrow-school.html'">
+                    <div class="project-header">
+                        <h3>🏫 哈罗公学夏校</h3>
+                        <p class="project-season">暑假项目 ⭐ 推荐</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            英国百年名校体验。纯正英式寄宿、英语+综合活动完美融合，在真实场景中开口说英语、建立自信。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>小班制教学（每班10人）</li>
+                            <li>英语+活动一体化课程</li>
+                            <li>纯正寄宿环境体验</li>
+                            <li>一价全包（住宿、餐饮、游览）</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2-4周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 2：寄宿学校体验营 -->
+                <div class="project-card" style="cursor: pointer;" onclick="alert('项目详情页面开发中...')">
+                    <div class="project-header">
+                        <h3>🏫 英国寄宿学校体验营</h3>
+                        <p class="project-season">春/暑假项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            深入英国顶级寄宿学校，体验真实的学院生活。与英国本地学生共同学习、生活、运动、参加学校活动。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>真实寄宿学校体验</li>
+                            <li>与英国学生同班级</li>
+                            <li>参加学校传统活动</li>
+                            <li>英语沉浸式环境</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 1-2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 2：牛津/剑桥暑期课程 -->
+                <div class="project-card" style="cursor: pointer;" onclick="alert('项目详情页面开发中...')">
+                    <div class="project-header">
+                        <h3>🎓 牛津/剑桥暑期课程</h3>
+                        <p class="project-season">暑期项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            由牛津/剑桥顶级教授授课，针对7-18岁学生设计的学术课程。包括传统学科与创意工坊。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>顶级教授授课</li>
+                            <li>小班制教学</li>
+                            <li>校园探访与体验</li>
+                            <li>结业证书</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2-3周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 3：英语强化与文化融合 -->
+                <div class="project-card" style="cursor: pointer;" onclick="alert('项目详情页面开发中...')">
+                    <div class="project-header">
+                        <h3>🌍 英语强化与文化融合</h3>
+                        <p class="project-season">春/暑假项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            专业英语教学结合英国文化体验。通过课堂、活动、实地考察全方位提升英语能力。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>专业英语教师团队</li>
+                            <li>语言强化课程</li>
+                            <li>文化考察与体验</li>
+                            <li>国际学生交流</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 4：STEM科学探险营 -->
+                <div class="project-card" style="cursor: pointer;" onclick="alert('项目详情页面开发中...')">
+                    <div class="project-header">
+                        <h3>🔬 STEM科学探险营</h3>
+                        <p class="project-season">暑期项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            创意科学实验与动手实践。探索英国科学教育创新，激发孩子的科学探索精神。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>实验室安全与操作</li>
+                            <li>创意科学项目</li>
+                            <li>博物馆与科学中心参访</li>
+                            <li>小组研究展示</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 5：英伦艺术与创意工坊 -->
+                <div class="project-card" style="cursor: pointer;" onclick="alert('项目详情页面开发中...')">
+                    <div class="project-header">
+                        <h3>🎨 英伦艺术与创意工坊</h3>
+                        <p class="project-season">春/暑假项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            艺术、戏剧、音乐、设计创意融合。在艺术氛围浓厚的环境中，培养创造力与自信心。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>艺术与戏剧课程</li>
+                            <li>博物馆美术馆导览</li>
+                            <li>创意作品展示</li>
+                            <li>国际交流与展演</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 6：领导力与国际素养 -->
+                <div class="project-card" style="cursor: pointer;" onclick="alert('项目详情页面开发中...')">
+                    <div class="project-header">
+                        <h3>👥 领导力与国际素养</h3>
+                        <p class="project-season">暑期项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            培养领导能力、团队合作、国际视野。通过项目、讨论、交流全面提升综合素质。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>领导力工作坊</li>
+                            <li>团队建设活动</li>
+                            <li>国际议题讨论</li>
+                            <li>全球问题解决</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如："对中小学生项目感兴趣"）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

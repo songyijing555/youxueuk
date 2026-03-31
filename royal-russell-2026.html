@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 皇家罗素中学国际夏校 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-detail {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .hero-detail-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-detail h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-detail-tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-detail-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .content-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .content-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content-list li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .highlight-text {
+            background-color: #fef9f3;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .info-box {
+            background-color: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .info-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p {
+            color: #666;
+            margin: 0;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .timeline-item {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .timeline-item h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-detail h1 {
+                font-size: 2rem;
+            }
+
+            .hero-detail-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> >
+            <a href="summer-school.html">官方暑期学校</a> >
+            <span>2026 皇家罗素中学国际夏校</span>
+        </div>
+    </div>
+
+    <!-- 英雄区 -->
+    <section class="hero-detail">
+        <div class="hero-detail-content">
+            <h1>🏰 2026 皇家罗素中学 (Royal Russell School) 国际夏校</h1>
+            <p class="hero-detail-tagline">在伦敦郊外的私人森林校园，开启充满活力的英伦夏日之旅</p>
+
+            <div class="hero-detail-meta">
+                <div class="meta-item">📅 8月9日 - 8月23日（第三期）</div>
+                <div class="meta-item">⏰ 2周</div>
+                <div class="meta-item">🎯 12–17岁青少年</div>
+                <div class="meta-item">📍 伦敦郊外</div>
+            </div>
+
+            <div class="flash-price">惊爆价：2周38800（含机票、住宿、接机、保险及一切费用）</div>
+        </div>
+    </section>
+
+    <!-- 详细内容 -->
+    <div class="detail-container">
+        <a href="summer-school.html" class="back-link">← 返回官方暑期学校列表</a>
+
+        <!-- 目标群体 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">🎯</span>
+                目标群体
+            </h2>
+            <div style="color: #666; line-height: 1.7;">
+                <p><strong>招生对象：</strong>12–17 岁青少年</p>
+                <p><strong>理想学员：</strong>渴望在安全、封闭的传统私校环境中学习英语，同时希望高频次往返伦敦进行文化探索，并广交全球好友的学子。</p>
+            </div>
+        </div>
+
+        <!-- 项目特色 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">✨</span>
+                项目特色
+            </h2>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 "森林校园"的独特魅力</h3>
+            <div class="highlight-text">
+                <p>学校坐落在伦敦近郊的一片私人绿地中，拥有顶级的基础设施和安全保障。在这里，学生既能享受自然宁静，又能快速触达伦敦市中心（仅30分钟）。</p>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 极高频次的伦敦研学</h3>
+            <ul class="content-list">
+                <li>多次伦敦全天深度研学（甚至包含伦敦夜晚探索之旅）</li>
+                <li>涵盖大英博物馆、自然历史博物馆、哈罗德百货等地标</li>
+                <li>专业文化讲解员陪同，提升知识深度与兴趣</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 沉浸式选修课 (Electives)</h3>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h4>创意与艺术类</h4>
+                    <p>创意艺术、涂鸦艺术（Graffiti）、摄影等</p>
+                </div>
+                <div class="info-box">
+                    <h4>技术与运动类</h4>
+                    <p>机器人制作、网球、足球、STEM 等</p>
+                </div>
+            </div>
+            <p style="color: #666; margin-top: 1rem;">学生可根据兴趣选择课程，实现真正的个性化学习体验。</p>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 国际化社交氛围</h3>
+            <ul class="content-list">
+                <li>强调"国际之夜"（International Night）和各种跨文化交流活动</li>
+                <li>帮助学生建立全球友谊网络，拓宽国际视野</li>
+            </ul>
+        </div>
+
+        <!-- 项目核心内容 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📚</span>
+                项目核心内容
+            </h2>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">学术英语与辩论</h3>
+            <ul class="content-list">
+                <li>课程涵盖听说读写四大技能综合提升</li>
+                <li>特别引入辩论环节（如剑桥联盟式辩论），锻炼学生的思维逻辑与表达能力</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">特色工作坊 (Masterclass)</h3>
+            <ul class="content-list">
+                <li>涂鸦艺术、烘焙、机器人制作等实践操作</li>
+                <li>让语言学习更具趣味性与实用性</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">全方位的文化远足</h3>
+            <ul class="content-list">
+                <li>伦敦多个博物馆与地标深度游览</li>
+                <li>前往英国海滨名城布莱顿（Brighton）及汉普顿宫（Hampton Court Palace）</li>
+                <li>专业导师讲解英国历史与文化</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">活力社交活动</h3>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h4>晚间活动</h4>
+                    <p>迪斯科派对、达人秀、卡拉OK、Dusemond 世界杯</p>
+                </div>
+                <div class="info-box">
+                    <h4>校园社团</h4>
+                    <p>体育竞赛、文化交流、创意展示等多样化选择</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目安排 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">⏰</span>
+                项目安排
+            </h2>
+
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">📅 项目时间安排</h3>
+            <div style="color: #666; line-height: 1.8; margin-bottom: 1.5rem;">
+                <p>• <strong>第一期：</strong>7月 （已售罄）</p>
+                <p>• <strong>第二期：</strong>7月至8月初 （已售罄）</p>
+                <p>• <strong>第三期：</strong>2026年 <strong>8月9日 – 8月23日</strong> （目前可报名）</p>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">💰 项目费用</h3>
+            <div class="flash-price" style="margin: 1rem 0;">每两周 38800（全包含）</div>
+
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🏠 食宿保障</h3>
+            <div style="color: #666; line-height: 1.8;">
+                <p>• 提供单人间、双人间及三人间选择，满足不同需求</p>
+                <p>• 全封闭式管理，提供从入住到结业的 24 小时贴心照看</p>
+                <p>• 专业监护团队值守，家长安心无忧</p>
+            </div>
+        </div>
+
+        <!-- PDF 文档 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📄</span>
+                项目资料
+            </h2>
+            <div style="height: 600px; border-radius: 8px; overflow: hidden;">
+                <embed src="images/royal-russell-london-area-summer-school.pdf#toolbar=1&navpanes=0&scrollbar=1" type="application/pdf" width="100%" height="100%">
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h3>第三期名额有限，立即咨询锁定席位！</h3>
+            <p>皇家罗素中学夏校因为其极高的伦敦研学频次和国际化氛围，往年都是快速售罄。第三期仍有席位，欢迎尽快咨询。</p>
+            <button class="cta-button" onclick="openConsultationForm()">立即咨询</button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如：对皇家罗素夏校感兴趣）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

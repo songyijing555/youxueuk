@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 牛津大学官方双主题夏校 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-detail {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .hero-detail-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-detail h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-detail-tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-detail-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .content-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .content-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content-list li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .info-box {
+            background-color: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .info-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p {
+            color: #666;
+            margin: 0;
+        }
+
+        .highlight-text {
+            background-color: #fef9f3;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .timeline-item {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .timeline-item h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-detail h1 {
+                font-size: 2rem;
+            }
+
+            .hero-detail-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> >
+            <a href="summer-school.html">官方暑期学校</a> >
+            <span>2026 牛津大学官方双主题夏校</span>
+        </div>
+    </div>
+
+    <section class="hero-detail">
+        <div class="hero-detail-content">
+            <h1>🎓 2026 牛津大学官方双主题夏校</h1>
+            <p class="hero-detail-tagline">牛津大学校内沉浸学习，聚焦气候创新与未来企业家培养</p>
+
+            <div class="hero-detail-meta">
+                <div class="meta-item">📅 暑期项目（具体档期待官方发布）</div>
+                <div class="meta-item">⏰ 2周（以官方排期为准）</div>
+                <div class="meta-item">🎯 16-18岁全球青年</div>
+                <div class="meta-item">📍 牛津大学校内</div>
+            </div>
+
+            <div class="flash-price">牛津大学官方项目：官方结业证书 + 推荐信 + 校友资源服务平台</div>
+        </div>
+    </section>
+
+    <div class="detail-container">
+        <a href="summer-school.html" class="back-link">← 返回官方暑期学校列表</a>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">🌟</span>
+                项目总览
+            </h2>
+            <div style="color: #666; line-height: 1.8;">
+                <p><strong>项目定位：</strong>牛津大学官方双主题夏校，面向16-18岁全球青年。</p>
+                <p><strong>学习模式：</strong>牛津大学校内沉浸学习 + 导师指导 + 实战挑战 + 国际社交。</p>
+                <p><strong>培养目标：</strong>在全球议题与商业创新场景中，塑造下一代学术与社会影响力领袖。</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📌</span>
+                双主题方向
+            </h2>
+
+            <div class="grid-2">
+                <div class="info-box">
+                    <h4>未来气候创新者夏校</h4>
+                    <p>牛津大学赛德商学院官方证书课程，聚焦气候危机解决方案与可持续发展领导力。</p>
+                </div>
+                <div class="info-box">
+                    <h4>未来企业家夏校</h4>
+                    <p>沉浸式创业加速训练，聚焦数字经济时代商业思维、融资谈判与AI应用能力。</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">方向一：未来气候创新者</h3>
+            <ul class="content-list">
+                <li>气候经济模型构建</li>
+                <li>清洁技术创新方法论</li>
+                <li>碳交易市场运作机制</li>
+                <li>可持续发展政策设计</li>
+            </ul>
+            <div class="highlight-text">
+                <p><strong>项目亮点：</strong>牛津环境变化研究所专家指导、模拟联合国气候谈判、新能源技术实验室参访、气候行动方案路演评审。</p>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">方向二：未来企业家</h3>
+            <ul class="content-list">
+                <li>精益创业方法论实践</li>
+                <li>商业计划书全要素构建</li>
+                <li>风险投资模拟谈判</li>
+                <li>人工智能商业应用</li>
+            </ul>
+            <div class="highlight-text">
+                <p><strong>项目亮点：</strong>牛津创业中心导师1v1辅导、牛津科技园企业实地研习、百万英镑级风投人评审会、初创项目孵化资源对接。</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">✅</span>
+                双项目共享权益
+            </h2>
+            <ul class="content-list">
+                <li>牛津大学校园全真学术体验</li>
+                <li>全球精英学员社交网络</li>
+                <li>官方结业证书及推荐信</li>
+                <li>终身校友资源服务平台</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">⏰</span>
+                项目安排
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>项目时长</h4>
+                    <p>2周（具体周次以官方当季发布为准）</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>项目对象</h4>
+                    <p>16-18岁，具备良好英语基础与全球议题兴趣的青年学生</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>学习形式</h4>
+                    <p>牛津校内课程 + 导师指导 + 团队项目 + 路演评审</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>录取建议</h4>
+                    <p>建议尽早提交申请意向，优先锁定目标方向与档期。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>想了解牛津大学官方双主题夏校申请细节？</h3>
+            <p>我们可根据学生背景匹配最适合的方向，并提供全流程申请支持与行前规划。</p>
+            <button class="cta-button" onclick="openConsultationForm()">立即咨询</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如：未来气候创新者或未来企业家方向）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

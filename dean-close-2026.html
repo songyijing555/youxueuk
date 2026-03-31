@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 迪恩克洛斯公学国际暑期学校 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-detail {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .hero-detail-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-detail h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-detail-tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-detail-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .content-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .content-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content-list li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .highlight-text {
+            background-color: #fef9f3;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .info-box {
+            background-color: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .info-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p {
+            color: #666;
+            margin: 0;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .timeline-item {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .timeline-item h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-detail h1 {
+                font-size: 2rem;
+            }
+
+            .hero-detail-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> >
+            <a href="summer-school.html">官方暑期学校</a> >
+            <span>2026 迪恩克洛斯公学国际暑期学校</span>
+        </div>
+    </div>
+
+    <section class="hero-detail">
+        <div class="hero-detail-content">
+            <h1>🌿 2026 迪恩克洛斯公学 (Dean Close) 国际暑期学校</h1>
+            <p class="hero-detail-tagline">在英国“最美乡村”腹地，开启语言与技能的双重飞跃</p>
+
+            <div class="hero-detail-meta">
+                <div class="meta-item">📅 2026年7月-8月</div>
+                <div class="meta-item">⏰ 每期2周（可延长至4周）</div>
+                <div class="meta-item">🎯 9-17岁男女青少年</div>
+                <div class="meta-item">📍 切尔滕纳姆（Cheltenham）</div>
+            </div>
+
+            <div class="flash-price">惊爆价：2周31800（含校内寄宿、课程及指定机场接送）</div>
+        </div>
+    </section>
+
+    <div class="detail-container">
+        <a href="summer-school.html" class="back-link">← 返回官方暑期学校列表</a>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">🎯</span>
+                目标群体
+            </h2>
+            <div style="color: #666; line-height: 1.7;">
+                <p><strong>招生对象：</strong>9-17岁男女青少年</p>
+                <p><strong>理想学员：</strong>希望在纯正英式乡村环境中学习，且对艺术、运动或特色技能（如马术、烹饪、编程）有浓厚兴趣的学生。</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">✨</span>
+                项目特色
+            </h2>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 绝佳地理位置</h3>
+            <div class="highlight-text">
+                <p>学校位于切尔滕纳姆（Cheltenham），紧邻英国著名科茨沃尔德（Cotswolds）自然风景区，环境优雅、历史文化氛围浓厚。</p>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 Skills Academies 定制课程</h3>
+            <ul class="content-list">
+                <li><strong>艺术类：</strong>烹饪学校、艺术学校、表演艺术（戏剧/舞蹈）</li>
+                <li><strong>运动类：</strong>马术学校、网球学院、游泳学校</li>
+                <li><strong>科技与户外：</strong>计算机编程（ComputerXplorers）、户外冒险（攀岩/团队协作）</li>
+                <li>学生可根据兴趣自选方向，进行深度技能学习</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 高强度校外研学 + 顶级设施</h3>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h4>每两周 6 次远足</h4>
+                    <p>深入探索周边文化名城与自然名胜，兼顾视野拓展与文化体验。</p>
+                </div>
+                <div class="info-box">
+                    <h4>世界级校园硬件</h4>
+                    <p>500座商业剧院、室外攀岩墙、专业马场与现代厨艺教室，学习体验全面升级。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📚</span>
+                项目核心内容
+            </h2>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">英语强化</h3>
+            <ul class="content-list">
+                <li>每两周提供 30+ 小时高质量英语教学</li>
+                <li>由资深教师授课，班级容量小，关注度高</li>
+                <li>在课堂与生活场景中持续提升听说读写综合能力</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">专项技能训练</h3>
+            <ul class="content-list">
+                <li>每天下午进入选定的技能学院</li>
+                <li>由专业教练/导师指导，开展实操训练</li>
+                <li>示例：4次 x 1.5小时马术或烹饪专项训练</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">全天候活动营</h3>
+            <ul class="content-list">
+                <li>晚间活动包含智力竞赛、迪斯科舞会、体育比赛等</li>
+                <li>促进国际学生互动，增强社交与团队协作能力</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">⏰</span>
+                项目安排
+            </h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>第一期</h4>
+                    <p>2026年7月8日 - 2026年7月22日</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>第二期</h4>
+                    <p>2026年7月22日 - 2026年8月5日</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>课程周期</h4>
+                    <p>每期2周，可申请延长至4周</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>食宿与交通</h4>
+                    <p>提供校内寄宿（单人间或宿舍型房间），并含指定机场（如希思罗）免费接送机服务。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📄</span>
+                完整项目手册
+            </h2>
+            <p style="color: #666; margin-bottom: 1.5rem;">下方可直接查看 Dean Close 项目 PDF 手册，包含课程与行程细节。</p>
+            <div style="width: 100%; height: 600px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
+                <embed src="images/dean-close-london-area.pdf#toolbar=1&navpanes=0&scrollbar=1" type="application/pdf" width="100%" height="100%">
+            </div>
+            <p style="color: #999; margin-top: 1rem; font-size: 0.9rem;">提示：可在预览中滚动、缩放或下载 PDF 文件</p>
+        </div>
+
+        <div class="cta-box">
+            <h3>想抢先锁定 Dean Close 暑校席位？</h3>
+            <p>每期名额有限，欢迎咨询获取班期安排、技能学院名额与申请建议。</p>
+            <button class="cta-button" onclick="openConsultationForm()">立即咨询</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如：希望参加 Dean Close 暑校）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

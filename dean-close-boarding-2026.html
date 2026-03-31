@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 迪恩克洛斯公学官方全浸入式插班项目 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-detail-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .project-intro {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-item p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .content-block {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .content-block li {
+            padding: 0.7rem 0;
+            color: #666;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .content-block li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .highlight-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+
+            .info-grid,
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> >
+            <a href="boarding-schools.html">私校插班</a> >
+            <span>2026 迪恩克洛斯公学官方全浸入式插班</span>
+        </div>
+    </div>
+
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <a href="boarding-schools.html" class="back-link">← 返回私校插班</a>
+
+            <h1 class="project-title">🎓 2026 迪恩克洛斯公学 (Dean Close) 官方全浸入式插班项目</h1>
+            <p class="project-intro">融入英伦名校日常，与本土学伴并肩开启学术之旅。项目在常规学年内运行，特别适合希望在真实英式学期中检验适应力、并提前规划赴英升学路径的中小学生。</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>👥 招生年龄</h4>
+                    <p>9-17岁中小学生（小学部/中学部）</p>
+                </div>
+                <div class="info-item">
+                    <h4>📅 建议时间</h4>
+                    <p>英国春季学期（与中国寒假高度契合）</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ 项目周期</h4>
+                    <p>通常2周，可按需求延展</p>
+                </div>
+                <div class="info-item">
+                    <h4>📍 项目地点</h4>
+                    <p>切尔滕纳姆 Cheltenham（科茨沃尔德核心区域）</p>
+                </div>
+            </div>
+
+            <div class="flash-price">100% 插班本地班级 + 1v1 Buddy 学伴支持，快速融入真实英式校园</div>
+
+            <h2 class="section-title">目标群体</h2>
+            <div class="content-block">
+                <ul>
+                    <li><strong>招生对象：</strong>9-17岁中小学生，覆盖小学部与中学部</li>
+                    <li><strong>理想学员：</strong>计划未来赴英留学，希望在真实学期中测试适应能力，或希望短期深度体验英式素质教育的学生</li>
+                    <li><strong>时间建议：</strong>项目在常规学年内进行，寒假衔接英国春季学期效果最佳</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">插班项目特色</h2>
+            <div class="content-block">
+                <ul>
+                    <li><strong>全浸入式课堂（100% Immersion）：</strong>学生作为插班生进入 Dean Close 正式班级，与本地学生共同学习数学、科学、艺术、体育等科目</li>
+                    <li><strong>影子学伴计划（Buddy）：</strong>每位学生配对英国本地学伴，从课堂到午餐再到课间社交，帮助快速融入</li>
+                    <li><strong>全能素质开发：</strong>重点培养团队协作、批判性思维、独立生活等可迁移技能</li>
+                    <li><strong>定制化研学：</strong>在2周插班基础上，可延展伦敦、牛津、巴斯、斯特拉特福等文化深度考察</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">地理位置与校园环境</h2>
+            <div class="content-block">
+                <ul>
+                    <li><strong>黄金地段：</strong>位于全英最美乡村科茨沃尔德核心城市切尔滕纳姆</li>
+                    <li><strong>交通便利：</strong>至伦敦/希思罗约1.5-2小时车程，至伯明翰、牛津、布里斯托约1小时左右</li>
+                    <li><strong>安全优美：</strong>校园兼具历史建筑氛围与现代生活便利，安全系数高，适合低龄学生独立成长</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">为什么选择 Dean Close 插班？</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>顶级硬件支持</h4>
+                    <p>共享马术场、现代厨艺中心、攀岩墙与专业剧院等一流设施。</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>升学衔接优势</h4>
+                    <p>获得学校老师直接反馈，为未来申请该校或同类名校积累高含金量背景。</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>国际生支持成熟</h4>
+                    <p>学校具备完整国际生支持体系，提供学业与心理双重支持。</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">项目实拍</h2>
+            <div class="content-block">
+                <p style="color:#666; margin-bottom: 1rem;">以下为 Dean Close 全浸入式插班项目现场照片：</p>
+                <div class="photo-grid">
+                    <img src="images/Immersion-5.jpg" alt="Dean Close 插班项目实拍 1">
+                    <img src="images/Immersion-7.jpg" alt="Dean Close 插班项目实拍 2">
+                    <img src="images/Immersion-8.jpg" alt="Dean Close 插班项目实拍 3">
+                    <img src="images/Immersion-9.jpg" alt="Dean Close 插班项目实拍 4">
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3>想为孩子提前体验真实英国学期？</h3>
+                <p>欢迎咨询 Dean Close 插班班期、Buddy 配对机制与定制研学方案。</p>
+                <button class="cta-button" onclick="openConsultationForm()">立即咨询</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如：希望参加Dean Close插班项目）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

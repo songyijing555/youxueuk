@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>官方暑期学校 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .projects-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .projects-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+        }
+
+        .project-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-season {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .project-body {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-highlights li {
+            padding: 0.4rem 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .project-highlights li:before {
+            content: "★ ";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .project-duration {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .btn-detail {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-detail:hover {
+            background-color: var(--primary-color);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <a href="index.html">首页</a> >
+            <a href="index.html#services">项目</a> >
+            <span>官方暑期学校</span>
+        </div>
+    </div>
+
+    <section class="projects-section">
+        <div class="projects-container">
+            <a href="index.html#services" class="back-link">← 返回项目总览</a>
+
+            <h2>官方暑期学校</h2>
+            <p class="projects-subtitle">英国私校官方课程，沉浸式寄宿学习与全英文环境</p>
+
+            <div class="projects-grid">
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='harrow-school.html'">
+                    <div class="project-header">
+                        <h3>🏫 哈罗公学夏校</h3>
+                        <p class="project-season">暑假项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            英国百年名校体验。纯正英式寄宿、英语与综合活动结合，在真实场景中提升表达与自信。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>小班制教学（每班10人）</li>
+                            <li>英语+活动一体化课程</li>
+                            <li>纯正寄宿环境体验</li>
+                            <li>一价全包（住宿、餐饮、游览）</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2-4周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='fettes-college-2026.html'">
+                    <div class="project-header">
+                        <h3>🏰 2026 费蒂斯公学官方夏季课程</h3>
+                        <p class="project-season">暑期项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            在苏格兰顶级私校开启精英寄宿生活。按年龄分层教学，强调英语浸润、文化探索与综合素质成长。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>官方夏校，校内寄宿与管理</li>
+                            <li>平均12人小班，高互动教学</li>
+                            <li>Oxford Placement Test 分级</li>
+                            <li>惊爆价：2周29800</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2-3周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='dean-close-2026.html'">
+                    <div class="project-header">
+                        <h3>🌿 2026 迪恩克洛斯公学国际暑期学校</h3>
+                        <p class="project-season">暑期项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            在英国“最美乡村”腹地，开启语言与技能的双重飞跃。项目融合英语强化与技能学院课程，适合9-17岁对艺术、运动或科技探索有兴趣的学生。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>坐落切尔滕纳姆，紧邻科茨沃尔德</li>
+                            <li>Skills Academies 定制课程（马术/烹饪/编程等）</li>
+                            <li>每两周6次校外远足研学</li>
+                            <li>每两周31800（含校内寄宿与指定机场接送）</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周/4周可选</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='mill-hill-2026.html'">
+                    <div class="project-header">
+                        <h3>🏙️ 2026 米尔希尔公学官方春/夏季课程</h3>
+                        <p class="project-season">春季 &amp; 暑期项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            伦敦绿带区的顶级私校，学术与都市魅力完美平衡。120英亩绿地校园，距伦敦市中心仅30分钟，春季与夏季双档期，7-17岁均可参加。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>春季（3月29日-4月12日）& 夏季（6月29日-8月24日）</li>
+                            <li>学术型 & 创意型双路径课程</li>
+                            <li>每周两次全天伦敦远足（大英博物馆等地标）</li>
+                            <li>惊爆价：2周39990（全包含，零隐形消费）</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 春季1周起 / 夏季2周起</span>
+                            <button class="btn-detail" onclick="event.stopPropagation(); window.location.href='mill-hill-2026.html'">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='royal-russell-2026.html'">
+                    <div class="project-header">
+                        <h3>🏰 2026 皇家罗素中学国际夏校</h3>
+                        <p class="project-season">暑期项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            伦敦近郊"森林校园"，兼具自然宁静与伦敦便利。高频次伦敦研学、个性化选修课、全球友谊网络，打造充满活力的英伦夏日。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>私人森林校园，伦敦市中心30分钟可达</li>
+                            <li>极高频次伦敦全天研学（含夜晚探索、多个博物馆）</li>
+                            <li>沉浸式选修课（艺术/机器人/摄影/运动/STEM）</li>
+                            <li>第三期：8月9-23日，每两周38800（全包）</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation(); window.location.href='royal-russell-2026.html'">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='oxford-official-2026.html'">
+                    <div class="project-header">
+                        <h3>🎓 2026 牛津大学官方双主题夏校</h3>
+                        <p class="project-season">16-18岁全球青年发展计划</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            牛津大学校内沉浸学习，聚焦"未来气候创新者"与"未来企业家"两大主题，结合前沿学术、实战挑战与国际社交网络，培养全球化青年领袖。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>牛津赛德商学院官方证书课程（气候方向）</li>
+                            <li>创业中心导师辅导 + 风投模拟谈判</li>
+                            <li>模拟联合国气候谈判 + 科技园企业参访</li>
+                            <li>双项目共享官方证书、推荐信与终身校友资源</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周（以官方排期为准）</span>
+                            <button class="btn-detail" onclick="event.stopPropagation(); window.location.href='oxford-official-2026.html'">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='dragon-school-2026.html'">
+                    <div class="project-header">
+                        <h3>🐉 2026 牛津龙校官方夏令营 Camp Dragon</h3>
+                        <p class="project-season">8-12岁低龄金牌项目</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            在全英顶级预备学校龙校开启奇幻夏日。项目以发现、成长与挑战为核心，融合沉浸式英语、创意工作坊与牛津文化探索，专为低龄学生打造。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Young Explorers 沉浸式课程（互动课堂+户外探险）</li>
+                            <li>24小时寄宿关怀，校内现代化公寓男女分宿</li>
+                            <li>乐高乐园、华威城堡、牛津探险等高质量远足</li>
+                            <li>全包价：2周48880（8-12岁）</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 每期2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation(); window.location.href='dragon-school-2026.html'">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

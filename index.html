@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英国游学网 - 牛津剑桥游学项目</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#services">项目</a></li>
+                <li><a href="#advantages">优势</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 英雄部分 -->
+    <section id="home" class="hero">
+        <img src="images/k-20.jpg.webp" alt="英国Cobham Hall私校女生插班生课堂实拍" class="hero-image">
+        <div class="hero-background">
+            <!-- 背景图片占位符 -->
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h2>英国游学与私校插班</h2>
+            <p class="hero-subtitle">本土团队一站式定制服务</p>
+            <p class="hero-description">覆盖英国优质私校与官方课程<br>为7–22岁学生提供个性化游学与升学路径</p>
+            <button class="cta-button" onclick="openConsultationForm()">👉 免费获取专属方案</button>
+        </div>
+    </section>
+
+    <!-- 服务分类部分 -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2>核心项目</h2>
+            
+            <!-- 短期游学 -->
+            <div class="service-card" style="cursor: pointer;" onclick="window.location.href='short-term-details.html'">
+                <div class="service-icon">👦</div>
+                <h3>短期游学</h3>
+                <p class="service-category">7–22岁学生沉浸式体验</p>
+                <p>1–4周结合语言学习、校园生活、文化活动的沉浸式英国教育体验</p>
+                <ul>
+                    <li>● 寄宿学校体验</li>
+                    <li>● 国际学生交流</li>
+                    <li>● 英语能力快速提升</li>
+                    <li>● 中小学 / 大学生专属班</li>
+                </ul>
+                <button class="service-btn" onclick="event.stopPropagation()">了解详情</button>
+            </div>
+
+            <!-- 私校插班 -->
+            <div class="service-card highlight" style="cursor: pointer;" onclick="window.location.href='boarding-schools.html'">
+                <div class="service-icon">🎓</div>
+                <h3>私校插班</h3>
+                <p class="service-category">真实英国课堂体验 ⭐ 热门项目</p>
+                <p>进入英国私立学校进行短期或中期学习，提前适应英国教育体系</p>
+                <ul>
+                    <li>● 2周体验 / 1学期 / 多学期</li>
+                    <li>● 与英国本地学生同课堂</li>
+                    <li>● 建立升学路径</li>
+                    <li>● 提升留学竞争力</li>
+                </ul>
+                <button class="service-btn" onclick="event.stopPropagation()">了解详情</button>
+            </div>
+
+            <!-- 官方暑期学校 -->
+            <div class="service-card" style="cursor: pointer;" onclick="window.location.href='summer-school.html'">
+                <div class="service-icon">☀️</div>
+                <h3>官方暑期学校</h3>
+                <p class="service-category">英国私校官方课程</p>
+                <p>由英国私校官方举办的7–18岁沉浸式暑期项目，全英文教学环境</p>
+                <ul>
+                    <li>● 校方官方课程（非拼团）</li>
+                    <li>● 全英文教学环境</li>
+                    <li>● 校内住宿 + 全封闭管理</li>
+                    <li>● 背景认可度高</li>
+                </ul>
+                <button class="service-btn" onclick="window.location.href='summer-school.html'">了解详情</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 英国游学优势部分 -->
+    <section id="advantages" class="advantages">
+        <div class="advantages-container">
+            <h2>为什么选择英国游学？</h2>
+            <p class="section-subtitle">我们为学生提供专业、安全、高质量的游学体验</p>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">🎓</div>
+                    <h3>顶级教育体系</h3>
+                    <p>英国教育注重独立思考与综合能力培养，是全球精英教育代表</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🌍</div>
+                    <h3>纯正语言环境</h3>
+                    <p>全英文沉浸环境，短时间内显著提升语言能力</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🏫</div>
+                    <h3>丰富学校资源</h3>
+                    <p>覆盖顶级私校与优质暑期项目，选择多样</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">📈</div>
+                    <h3>升学背景提升</h3>
+                    <p>为未来申请英国及世界名校提供竞争优势</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🛡</div>
+                    <h3>安全与规范管理</h3>
+                    <p>寄宿体系成熟，监管严格，家长更安心</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">👥</div>
+                    <h3>本土团队支持</h3>
+                    <p>英国本地资源与紧急支持，贴心陪伴学生</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我们的服务部分 -->
+    <section id="our-services" class="our-services">
+        <div class="our-services-container">
+            <h2>我们的服务</h2>
+            <p class="section-subtitle">从咨询到结束，全程一对一专属服务</p>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-number">01</div>
+                    <h3>个性化方案定制</h3>
+                    <p>根据学生年龄、目标与预算制定专属游学路径</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-number">02</div>
+                    <h3>英国学校资源对接</h3>
+                    <p>精选优质私校与官方项目，直接对接学校</p>
+                </div>
+                
+                <div class="service-item highlight-service">
+                    <div class="service-number">03</div>
+                    <h3>插班申请支持</h3>
+                    <p>协助申请英国私校短期或学期课程，成功率高</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-number">04</div>
+                    <h3>住宿与接机安排</h3>
+                    <p>寄宿 / 校内住宿 + 英国接送服务</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-number">05</div>
+                    <h3>签证与材料指导</h3>
+                    <p>全流程指导，降低出错风险，确保顺利出行</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-number">06</div>
+                    <h3>英国本土团队支持</h3>
+                    <p>提供本地资源与紧急支持，学生安全有保障</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例部分 -->
+    <section id="cases" class="cases">
+        <div class="cases-container">
+            <h2>学生案例</h2>
+            <p class="section-subtitle">看学生如何通过游学改变人生轨迹</p>
+            
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-age">14岁</span>
+                        <span class="case-type">短期游学</span>
+                    </div>
+                    <h3>参加牛津暑期学校</h3>
+                    <p class="case-description">Lily在两周的暑期项目中，与国际学生共同学习，英语能力显著提升。回国后，她对留学充满信心。</p>
+                    <div class="case-tags">
+                        <span class="tag">英语提升</span>
+                        <span class="tag">开阔视野</span>
+                        <span class="tag">国际交流</span>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-age">16岁</span>
+                        <span class="case-type">私校插班</span>
+                    </div>
+                    <h3>私校插班1学期</h3>
+                    <p class="case-description">Jack通过插班项目，真实体验英国课堂教学，与本地学生建立友谊。成功适应英国教育体系。</p>
+                    <div class="case-tags">
+                        <span class="tag">留学适应</span>
+                        <span class="tag">学术提升</span>
+                        <span class="tag">升学规划</span>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-header">
+                        <span class="case-age">20岁</span>
+                        <span class="case-type">学术项目</span>
+                    </div>
+                    <h3>短期学术强化项目</h3>
+                    <p class="case-description">Tom参加大学生学术项目，获得教授推荐信，增强语言与学术背景。申请到心仪大学。</p>
+                    <div class="case-tags">
+                        <span class="tag">学术认可</span>
+                        <span class="tag">推荐信</span>
+                        <span class="tag">名校申请</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们部分 -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>英国本土教育服务团队</h3>
+                    <p>我们位于英国本地，熟悉英国教育体系与学校资源。专注为中国学生提供高质量游学与插班服务。</p>
+                    <p>相比传统中介，我们更了解学校的实际情况，能为学生提供更真实、可靠的建议与支持。</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <h4>✓ 英国本地</h4>
+                            <p>一手学校资源，真实了解英国教育</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>✓ 一手资源</h4>
+                            <p>直接与学校合作，无中间环节</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>✓ 可落地服务</h4>
+                            <p>本地团队提供实时支持与帮助</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">服务学生</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">满意度</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">合作学校</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 咨询部分 -->
+    <section id="contact" class="consultation">
+        <div class="consultation-container">
+            <h2>获取专属游学方案</h2>
+            <p>填写信息，我们将在24小时内为您提供个性化建议</p>
+            <div class="consultation-buttons">
+                <button class="btn-primary" onclick="openConsultationForm()">在线咨询</button>
+                <button class="btn-secondary" onclick="openPhoneConsultation()">电话咨询</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">专注为7–22岁学生提供个性化游学与升学路径</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

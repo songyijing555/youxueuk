@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学生项目 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .projects-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .projects-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #667eea 100%);
+            color: var(--white);
+            padding: 2rem;
+        }
+        
+        .project-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-season {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .project-body {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+        
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-highlights li {
+            padding: 0.4rem 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .project-highlights li:before {
+            content: "★ ";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+        
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .project-duration {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .btn-detail {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-detail:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="short-term-details.html">短期游学</a> > 
+            <span>大学生项目</span>
+        </div>
+    </div>
+
+    <!-- 项目列表 -->
+    <section class="projects-section">
+        <div class="projects-container">
+            <a href="short-term-details.html" class="back-link">← 返回短期游学</a>
+            
+            <h2>大学生项目</h2>
+            <p class="projects-subtitle">为18–22岁大学生设计的学术体验与职业发展项目</p>
+            
+            <div class="projects-grid">
+                <!-- 项目 1：牛津/剑桥暑假课程 -->
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='oxford-cambridge-2026.html'">
+                    <div class="project-header">
+                        <h3>🏛️ 牛津/剑桥暑假课程与G5名校探访</h3>
+                        <p class="project-season">2026年暑期</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            "1+1"双模块个性化模式：首周在牛津或剑桥进行深度学术体验，次周全团汇合伦敦开启G5名校探访与文化之旅。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>牛剑深度学术体验</li>
+                            <li>G5名校全覆盖探访</li>
+                            <li>正式晚宴与下午茶体验</li>
+                            <li>官方结业证书</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 2周</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 2：爱丁堡暑期学校 -->
+                <div class="project-card" style="cursor: pointer;" onclick="window.location.href='edinburgh-2026.html'">
+                    <div class="project-header">
+                        <h3>🏰 2026 爱丁堡暑期学校项目</h3>
+                        <p class="project-season">2026年暑期</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            学术、文化与体验的沉浸式苏格兰之旅。走进全球排名第27的爱丁堡大学，体验哈利波特灵感地、世界最大艺术节、苏格兰高地独特风光。
+                        </p>
+                        <ul class="project-highlights">
+                            <li>爱丁堡大学学术体验（QS排名27）</li>
+                            <li>哈利波特灵感地探寻</li>
+                            <li>爱丁堡艺术节深度体验</li>
+                            <li>苏格兰高地与尼斯湖探访</li>
+                        </ul>
+                        <div class="project-footer">
+                            <span class="project-duration">⏰ 13晚14天</span>
+                            <button class="btn-detail" onclick="event.stopPropagation()">了解详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

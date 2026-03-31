@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英国私校插班项目 - 顶级学校推荐</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .boarding-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .boarding-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .school-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .school-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: start;
+        }
+
+        .school-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #3b82f6;
+        }
+
+        .school-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .school-header {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            padding: 2rem;
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .school-name {
+            font-size: 1.8rem;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .school-location {
+            color: #666;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .school-content {
+            padding: 2rem;
+        }
+
+        .school-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #1e3a8a;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-value {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .quick-facts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .fact-item {
+            text-align: center;
+        }
+
+        .fact-number {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            font-weight: 700;
+        }
+
+        .fact-label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        .highlights {
+            margin: 1.5rem 0;
+        }
+
+        .highlight-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            padding: 0.4rem 0;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .highlight-list li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-list li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .school-footer {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn-contact {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn-contact:hover {
+            background-color: #1e3a8a;
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            background-color: #6b7280;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #4b5563;
+        }
+
+        .enrollment-section {
+            background-color: #f0f9ff;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin-top: 2rem;
+        }
+
+        .enrollment-section h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .fee-table thead {
+            background-color: #e0e7ff;
+        }
+
+        .fee-table th,
+        .fee-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .fee-table tr:hover {
+            background-color: #f9fafb;
+        }
+
+        /* Tighten spacing between description and highlights in Cobham card */
+        .school-grid .project-description {
+            flex: 0 0 auto;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .school-grid .project-highlights {
+            margin: 0 0 1.5rem 0;
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            .boarding-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .school-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-facts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="window.location.href='index.html#contact'">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 页头 -->
+    <div class="boarding-header">
+        <div class="breadcrumb">
+            <a href="index.html">首页</a> > 
+            <a href="index.html#services">项目</a> > 
+            <span>私校插班</span>
+        </div>
+        <h1>英国顶级私校插班</h1>
+        <p>精选英国优质私立学校，为学生提供真实的英国课堂体验</p>
+    </div>
+
+    <!-- 学校列表 -->
+    <div class="school-container">
+        <!-- Cobham Hall -->
+
+        <div class="school-grid">
+            <div class="project-card highlight" style="cursor: pointer;" onclick="window.location.href='cobham-hall-detail.html'">
+                <div class="project-header">
+                    <h3>🏫 Cobham Hall 私校插班</h3>
+                    <p class="project-season">全年可选（2周/学期） ⭐ 首推</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        英国肯特郡优质私校，真实插班本地课堂，校内寄宿，全方位陪伴式体验。适合中学阶段希望直升英国教育体系的学生。
+                    </p>
+                    <ul class="project-highlights">
+                        <li>可直接插班本地班级、非国际班</li>
+                        <li>校内寄宿 24/7 管理及活动陪同</li>
+                        <li>小班 + EAL 英语支持，稳定学习进度</li>
+                        <li>1v1本地学伴+官方证书+推荐信</li>
+                    </ul>
+                    <div class="project-footer">
+                        <span class="project-duration">⏰ 2周起 / 1学期</span>
+                        <button class="btn-detail" onclick="event.stopPropagation();window.location.href='cobham-hall-detail.html'">了解详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" style="cursor: pointer;" onclick="window.location.href='dean-close-boarding-2026.html'">
+                <div class="project-header">
+                    <h3>🎓 2026 迪恩克洛斯公学官方全浸入式插班</h3>
+                    <p class="project-season">春季学期优先（寒假可衔接）</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        融入英伦名校日常，与本土学伴并肩开启学术之旅。学生以插班生身份进入正式班级，体验100%本地课堂与寄宿生活。
+                    </p>
+                    <ul class="project-highlights">
+                        <li>全浸入式课堂：与本地学生同班上课</li>
+                        <li>1v1 英国 Buddy 学伴全程支持</li>
+                        <li>2周起插班，可定制伦敦/牛津/巴斯研学</li>
+                        <li>共享马术场、剧院、攀岩墙等顶级设施</li>
+                    </ul>
+                    <div class="project-footer">
+                        <span class="project-duration">⏰ 2周（可定制延长）</span>
+                        <button class="btn-detail" onclick="event.stopPropagation();window.location.href='dean-close-boarding-2026.html'">了解详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" style="cursor: pointer;" onclick="window.location.href='merchiston-castle-2026.html'">
+                <div class="project-header">
+                    <h3>🏰 2026 莫切斯顿中学官方插班与夏校</h3>
+                    <p class="project-season">全年可选（网球/高尔夫学院）</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        苏格兰唯一的顶尖男子私校，100英亩绝美校园。全浸入式插班体验，网球和高尔夫专业学院提升竞技水平，同时深化英语流利度与国际视野。
+                    </p>
+                    <ul class="project-highlights">
+                        <li>苏格兰男子私校翘楚，全男性寄宿校园</li>
+                        <li>网球/高尔夫学院每周15小时专业教练指导</li>
+                        <li>100%融入本地班级与寄宿社区</li>
+                        <li>EAL 语言支持 + 苏格兰文化研学周末</li>
+                    </ul>
+                    <div class="project-footer">
+                        <span class="project-duration">⏰ 2周起 / 学年插班</span>
+                        <button class="btn-detail" onclick="event.stopPropagation();window.location.href='merchiston-castle-2026.html'">了解详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 更多学校（模板） -->
+            <div class="school-card">
+                <div class="school-header">
+                    <div class="school-name">🏫 敬请期待</div>
+                    <div class="school-location">📍 更多优质学校</div>
+                </div>
+                <div class="school-content">
+                    <div class="school-info">
+                        <div class="info-label">即将上线</div>
+                        <div class="info-value">
+                            我们正在与英国其他顶级私校合作，包括：
+                        </div>
+                    </div>
+
+                    <div class="highlights">
+                        <ul class="highlight-list" style="border: none;">
+                            <li>Cheltenham Ladies' College</li>
+                            <li>Benenden School</li>
+                            <li>Westonbirt School</li>
+                            <li>Tudor Hall School</li>
+                            <li>Rodean School</li>
+                        </ul>
+                    </div>
+
+                    <div class="school-info" style="margin-top: 2rem;">
+                        <div class="info-label">敬请关注</div>
+                        <div class="info-value">
+                            更多学校详情即将发布。<br>
+                            如您对特定学校感兴趣，欢迎提前咨询我们的团队。
+                        </div>
+                    </div>
+
+                    <div class="school-footer">
+                        <button class="btn-contact" onclick="window.location.href='index.html#contact'">
+                            咨询其他学校信息
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 返回按钮 -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html#services" class="btn-back">← 返回项目列表</a>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">专注为7–22岁学生提供个性化游学与升学路径</p>
+        </div>
+    </footer>
+</body>
+</html>

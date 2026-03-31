@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 米尔希尔公学官方春/夏季课程 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-detail {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .hero-detail-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-detail h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-detail-tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-detail-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .content-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .content-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content-list li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .highlight-text {
+            background-color: #fef9f3;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .info-box {
+            background-color: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .info-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p {
+            color: #666;
+            margin: 0;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .timeline-item {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .timeline-item h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+
+        .season-badge {
+            display: inline-block;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .badge-spring {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-summer {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-detail h1 {
+                font-size: 2rem;
+            }
+
+            .hero-detail-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> >
+            <a href="summer-school.html">官方暑期学校</a> >
+            <span>2026 米尔希尔公学官方春/夏季课程</span>
+        </div>
+    </div>
+
+    <!-- 英雄区 -->
+    <section class="hero-detail">
+        <div class="hero-detail-content">
+            <h1>🏙️ 2026 米尔希尔公学 (Mill Hill) 官方春/夏季课程</h1>
+            <p class="hero-detail-tagline">在伦敦绿带区的顶级私校，体验学术与都市魅力的完美平衡</p>
+
+            <div class="hero-detail-meta">
+                <div class="meta-item">📅 春季 & 暑期双档期</div>
+                <div class="meta-item">⏰ 春季1周起 / 夏季2周起</div>
+                <div class="meta-item">🎯 7–17岁青少年</div>
+                <div class="meta-item">📍 伦敦北部绿带区</div>
+            </div>
+
+            <div class="flash-price">惊爆价：2周39990（包机票、住宿、接机、全保险及英国游学期间一切费用）</div>
+        </div>
+    </section>
+
+    <!-- 详细内容 -->
+    <div class="detail-container">
+        <a href="summer-school.html" class="back-link">← 返回官方暑期学校列表</a>
+
+        <!-- 目标群体 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">🎯</span>
+                目标群体
+            </h2>
+            <div style="color: #666; line-height: 1.7;">
+                <p><strong>招生对象：</strong>7–17 岁青少年</p>
+                <p><strong>理想学员：</strong>既想体验伦敦的繁华与文化，又希望在宁静、安全的英式传统校园内专注学术提升的学生。</p>
+                <p><strong>时间灵活：</strong>该校不仅提供夏季课程，还提供 3–4 月间的春季课程，时间覆盖非常灵活，适合不同假期安排的家庭。</p>
+            </div>
+        </div>
+
+        <!-- 项目特色 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">✨</span>
+                项目特色
+            </h2>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 伦敦"后花园"的校园环境</h3>
+            <div class="highlight-text">
+                <p>校园占地 120 英亩，虽然位于伦敦，却拥有广阔的绿地和森林。距离伦敦市中心仅 30 分钟车程，真正做到"出则繁华，入则宁静"。</p>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 双重课程路径</h3>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h4>📐 学术型 (Academic)</h4>
+                    <p>侧重科学、数学及批判性思维，为有学术目标的学员深化知识体系。</p>
+                </div>
+                <div class="info-box">
+                    <h4>🎨 创意型 (Creative)</h4>
+                    <p>侧重艺术、戏剧及设计，满足对表达与创造力有热情的学员。</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 极高性价比的"全包式"服务</h3>
+            <ul class="content-list">
+                <li>已包含全伦敦机场（希思罗 / 盖特威克 / 斯坦斯特德等）往返接送机</li>
+                <li>全额保险涵盖行程全程，零额外隐形消费</li>
+                <li>所有远足门票及食宿均已包含在内</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">🔹 官方认证与资深师资</h3>
+            <div class="highlight-text">
+                <p>学校秉承 <em>"Instilling values, inspiring minds"</em> 的教育理念，师资均由校方直接考核，学术严谨度极高，全程由受训专业教职人员管理。</p>
+            </div>
+        </div>
+
+        <!-- 项目核心内容 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📚</span>
+                项目核心内容
+            </h2>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">强化课堂教学</h3>
+            <ul class="content-list">
+                <li>每周高强度课堂学习，结合小班授课模式</li>
+                <li>确保每个孩子都能得到老师的充分关注</li>
+                <li>按年龄与英语水平分级，学习效率最大化</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">伦敦深度探索</h3>
+            <ul class="content-list">
+                <li>每周安排两次全天远足（通常在周三和周六）</li>
+                <li>目的地涵盖大英博物馆、伦敦塔、伦敦眼等城市地标</li>
+                <li>配合专业领队讲解，将课堂知识与实地参观深度融合</li>
+            </ul>
+
+            <h3 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">英式寄宿生活</h3>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h4>Boarding House 生活</h4>
+                    <p>体验经典英式寄宿学校传统，与来自世界各地的同龄学员共同生活学习。</p>
+                </div>
+                <div class="info-box">
+                    <h4>丰富晚间社交活动</h4>
+                    <p>达人秀、迷你奥运会等多样化晚间活动，帮助学员快速建立友谊与自信。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目安排 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">⏰</span>
+                项目安排
+            </h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>🌸 春季课程 (Spring)</h4>
+                    <p>
+                        <span class="season-badge badge-spring">春季</span><br>
+                        2026年3月29日 – 4月12日<br>
+                        最少 <strong>1周</strong>起步
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h4>☀️ 夏季课程 (Summer)</h4>
+                    <p>
+                        <span class="season-badge badge-summer">暑期</span><br>
+                        2026年6月29日 – 8月24日<br>
+                        最少 <strong>2周</strong>起步
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h4>📍 校园位置</h4>
+                    <p>伦敦北部绿带区（London Boroughs），距伦敦市中心约30分钟车程，安静宜居，交通便利。</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🛡 安全保障</h4>
+                    <p>全封闭校园管理，24小时专业人员值守，全程全额保险，家长安心无忧。</p>
+                </div>
+            </div>
+
+            <div class="flash-price" style="margin-top: 2rem;">惊爆价：2周39990（包机票，住宿，接机和英国游学期间费用）</div>
+        </div>
+
+        <!-- 图片展示 -->
+        <div class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📸</span>
+                校园风采
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; grid-auto-rows: 300px;">
+                <img src="images/e626148adc49e2ccdcb959d7ff135717fbe223ab-6274x4183.avif" alt="米尔希尔公学校园" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;">
+                <img src="images/main-mill-hill-school-15.png" alt="米尔希尔公学课程" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;">
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h3>想了解米尔希尔公学春/夏季课程名额与申请详情？</h3>
+            <p>春季班名额有限，欢迎提前咨询锁定席位，我们将为您提供个性化选课建议。</p>
+            <button class="cta-button" onclick="openConsultationForm()">立即咨询</button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如：对米尔希尔公学夏季课程感兴趣）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈罗公学夏校 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .project-detail-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .project-intro {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .info-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .info-item p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        
+        .content-block {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .content-block li {
+            padding: 0.7rem 0;
+            color: #666;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .content-block li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .pricing-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .pricing-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            color: #666;
+        }
+        
+        .pricing-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .highlight-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .highlight-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: var(--white);
+        }
+        
+        .schedule-table th {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .schedule-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            color: #666;
+        }
+        
+        .schedule-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: #856404;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+        
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-table, .schedule-table {
+                font-size: 0.9rem;
+            }
+            
+            .pricing-table th, .pricing-table td,
+            .schedule-table th, .schedule-table td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="short-term-details.html">短期游学</a> > 
+            <a href="short-term-middle-school.html">中小学生项目</a> > 
+            <span>哈罗公学夏校</span>
+        </div>
+    </div>
+
+    <!-- 项目详情 -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <a href="short-term-middle-school.html" class="back-link">← 返回中小学生项目</a>
+            
+            <h1 class="project-title">🏫 哈罗公学夏校 2026</h1>
+            <p class="project-intro">
+                在百年名校体验纯正英式寄宿文化。英语+综合活动完美结合，让学生在真实场景中自然开口说英语，建立自信与国际视野。适合第一次出国的9–17岁学生。
+            </p>
+
+            <!-- 基本信息 -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📍 项目地点</h4>
+                    <p>英国伦敦哈罗公学校园内</p>
+                </div>
+                <div class="info-item">
+                    <h4>👥 招生年龄</h4>
+                    <p>9–17岁，分龄段教学</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ 项目时间</h4>
+                    <p>2026年7月3日–7月29日</p>
+                </div>
+                <div class="info-item">
+                    <h4>🎓 班级规模</h4>
+                    <p>平均10人，最多12人</p>
+                </div>
+                <div class="info-item">
+                    <h4>✓ 课时安排</h4>
+                    <p>每周15–17.5小时英语</p>
+                </div>
+            </div>
+
+            <div class="flash-price">
+                惊爆价：2周59800（包机票，住宿，接机和英国游学期间费用）
+            </div>
+
+            <!-- 项目概览 -->
+            <h2 class="section-title">项目概览</h2>
+            <div class="content-block">
+                <p>哈罗公学（Harrow School）是英国最著名的私校之一，拥有超过450年的办学传统。夏校项目专为国际学生设计，采用<strong>英语+综合活动</strong>的旗舰模式：课堂英语学习与主题活动、伦敦及周边游览紧密结合，帮助孩子在真实生活场景中自然运用英语。</p>
+                
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">课程特色</h3>
+                <ul>
+                    <li>纯正英式教学与寄宿环境，体验名校文化</li>
+                    <li>小班制教学，平均每班10人，注重个体参与度</li>
+                    <li>口语、听力、发音全面训练，配合软技能（团队协作、演讲、领导力）</li>
+                    <li>每周3–4次校外游览活动，探索伦敦及英国文化</li>
+                    <li>住宿、餐饮、活动、游览、保险等一价全包，家长省心</li>
+                </ul>
+
+                <div class="note">
+                    <strong>✓ 费用包含：</strong> 英语课程 · 学习资料 · 校内住宿 · 三餐 · 体育与社交活动 · 专业课程 · 学术报告 · 游览 · 洗衣服务 · 保险 · 结业证书 · 机场接送（预约）
+                </div>
+            </div>
+
+            <!-- Juniors 项目（9–11岁） -->
+            <h2 class="section-title">项目一：哈罗公学 Juniors（9–11岁）</h2>
+            
+            <div class="content-block">
+                <p><strong>本项目所有费用均已含在惊爆价中，具体班期与详情请联系顾问。</strong></p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 纯正寄宿体验</h4>
+                    <p>入住哈罗校园，体验英式寄宿生活和校园文化，为未来出国留学打基础</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 英语+活动一体</h4>
+                    <p>学到的语言立即在真实场景中应用，不再只是做题，而是"用英语生活"</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 小班安全保障</h4>
+                    <p>班级平均10人，校内师生比1:10，让年幼孩子在安心环境中学习</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 全面能力培养</h4>
+                    <p>通过活动与竞赛培养沟通、团队协作、自信表现与国际视野</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 一价全包省心</h4>
+                    <p>课程、住宿、餐饮、活动、游览、保险等全部包含，减轻家长负担</p>
+                </div>
+            </div>
+
+            <!-- Seniors 项目（12–17岁） -->
+            <h2 class="section-title">项目二：哈罗公学 Seniors（12–17岁）</h2>
+            
+            <div class="content-block">
+                <p><strong>本项目所有费用均已含在惊爆价中，具体班期与详情请联系顾问。</strong></p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 升学预演机会</h4>
+                    <p>体验英式课堂与寄宿生活节奏，为未来申请英国中学/大学做准备</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 权威认证教学</h4>
+                    <p>英国文化教育协会（British Council）认证，English UK 成员机构，教学质量有保障</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 软技能全面提升</h4>
+                    <p>系统训练演讲、辩论、领导力等关键技能，为未来升学与职场做准备</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 可选专项课程</h4>
+                    <p>选择领导力、网球、戏剧、足球或科学方向，深化兴趣、丰富申请背景</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 多元国际环境</h4>
+                    <p>与来自全球的同龄人交流，提升跨文化沟通能力与全球视野</p>
+                </div>
+            </div>
+
+            <!-- 课程与活动 -->
+            <h2 class="section-title">课程与活动详情</h2>
+            
+            <div class="content-block">
+                <h3 style="color: var(--secondary-color);">每日课程安排</h3>
+                <ul>
+                    <li><strong>每周英语课时：</strong>15–17.5小时，强调口语表达、听力理解与准确发音</li>
+                    <li><strong>软技能培养：</strong>团队协作、问题解决、辩论、演讲、领导力等综合训练</li>
+                    <li><strong>丰富活动：</strong>课余时间安排多样社交与体育活动，让学生在轻松环境中使用英语、结交朋友</li>
+                    <li><strong>精彩游览：</strong>每周3–4次校外游览，在真实生活场景中应用课堂所学，深入了解英国文化</li>
+                </ul>
+
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">典型一天作息</h3>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>活动</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:00–08:30</td>
+                            <td>早餐</td>
+                        </tr>
+                        <tr>
+                            <td>09:00–12:30</td>
+                            <td>英语课程</td>
+                        </tr>
+                        <tr>
+                            <td>12:30–13:15</td>
+                            <td>午餐</td>
+                        </tr>
+                        <tr>
+                            <td>13:15–14:00</td>
+                            <td>休息时间</td>
+                        </tr>
+                        <tr>
+                            <td>14:00–18:00</td>
+                            <td>下午活动或游览</td>
+                        </tr>
+                        <tr>
+                            <td>18:00–18:45</td>
+                            <td>晚餐</td>
+                        </tr>
+                        <tr>
+                            <td>18:45–19:30</td>
+                            <td>休息时间</td>
+                        </tr>
+                        <tr>
+                            <td>19:30–21:00</td>
+                            <td>晚间活动</td>
+                        </tr>
+                        <tr>
+                            <td>21:00–22:00</td>
+                            <td>洗漱休息 & 熄灯就寝</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 为什么选择 -->
+            <h2 class="section-title">为什么选择哈罗公学夏校？</h2>
+            
+            <div class="content-block">
+                <p style="font-size: 1.1rem; color: #333; line-height: 1.8; margin-bottom: 1.5rem;">
+                    哈罗公学夏校是第一次出国、想在安全环境中快速提升英语和独立能力的学生首选。学生不仅能体验百年名校的寄宿文化，还能在充满趣味的活动和游览中自然开口说英语、建立自信。
+                </p>
+                
+                <ul>
+                    <li>🎓 <strong>顶级名校背景：</strong> 哈罗公学是英国最负盛名的寄宿制私校，450+年办学历史</li>
+                    <li>🌍 <strong>兼顾多个目标：</strong> 语言提升 + 品格培养 + 安全保障，一举多得</li>
+                    <li>🛡️ <strong>成熟的寄宿体系：</strong> 完善的监管、高师生比、紧急支持，家长放心</li>
+                    <li>📈 <strong>申请加分项：</strong> 为未来申请英国及世界名校增加竞争力</li>
+                    <li>💪 <strong>自信与独立：</strong> 学生在小班环境中充分发展自己、建立国际视野</li>
+                </ul>
+            </div>
+
+            <!-- 咨询按钮 -->
+            <div class="cta-section">
+                <h3>准备好了吗？</h3>
+                <p>立即咨询，获取专属方案。我们的团队将在24小时内为您提供详细建议。</p>
+                <button class="cta-button" onclick="openConsultationForm()">👉 免费咨询</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如："对哈罗公学项目感兴趣"）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

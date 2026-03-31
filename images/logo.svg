@@ -1,0 +1,55 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 - 白色 -->
+  <circle cx="100" cy="100" r="95" fill="#ffffff" opacity="0.2"/>
+  
+  <!-- 地球 - 红色 -->
+  <circle cx="100" cy="100" r="70" fill="#dc2626" opacity="0.15"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#dc2626" stroke-width="2"/>
+  
+  <!-- 地球经纬线 - 红色 -->
+  <path d="M 50 100 Q 100 80 150 100 Q 100 120 50 100" fill="none" stroke="#dc2626" stroke-width="1" opacity="0.5"/>
+  <path d="M 100 50 L 100 150" fill="none" stroke="#dc2626" stroke-width="1" opacity="0.5"/>
+  <path d="M 60 80 Q 100 70 140 80" fill="none" stroke="#dc2626" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Big Ben塔楼 (伦敦标志) - 黑色 -->
+  <g transform="translate(100, 70)">
+    <!-- 塔身 -->
+    <rect x="-8" y="0" width="16" height="35" fill="#1f2937" stroke="#000000" stroke-width="1.5"/>
+    
+    <!-- 塔顶 -->
+    <polygon points="0,-5 -6,0 6,0" fill="#000000"/>
+    
+    <!-- 钟表盘 - 红色 -->
+    <circle cx="0" cy="12" r="4" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+    <circle cx="0" cy="12" r="2.5" fill="#dc2626" opacity="0.4"/>
+  </g>
+  
+  <!-- 书籍元素 - 黑色 -->
+  <g transform="translate(70, 110)">
+    <path d="M 0 0 L 15 0 L 15 18 L 0 18 Z" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="3" x2="15" y2="3" stroke="#1f2937" stroke-width="1.5"/>
+    <line x1="0" y1="6" x2="15" y2="6" stroke="#1f2937" stroke-width="1.5"/>
+    <line x1="0" y1="9" x2="15" y2="9" stroke="#1f2937" stroke-width="1.5"/>
+  </g>
+  
+  <!-- 学位帽元素 - 红色 -->
+  <g transform="translate(115, 108)">
+    <!-- 帽顶 -->
+    <line x1="2" y1="2" x2="8" y2="2" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="5" cy="2" r="1.5" fill="#dc2626"/>
+    
+    <!-- 帽沿 -->
+    <ellipse cx="5" cy="8" rx="8" ry="3" fill="none" stroke="#dc2626" stroke-width="2"/>
+    <!-- 帽沿阴影 -->
+    <path d="M -3 8 Q 5 10 13 8" fill="none" stroke="#991b1b" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  
+  <!-- 飞机元素 (代表游学旅行) - 红色 -->
+  <g transform="translate(140, 60)">
+    <path d="M 0 4 L 8 0 L 6 4 L 8 8 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1"/>
+    <circle cx="5" cy="4" r="1.5" fill="#dc2626"/>
+  </g>
+  
+  <!-- 外圈装饰 -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5" opacity="0.4"/>
+</svg>

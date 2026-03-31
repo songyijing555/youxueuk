@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobham 私校插班项目 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-detail-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .project-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .project-intro {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        .info-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .info-item p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        .content-block {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        .content-block li {
+            padding: 0.7rem 0;
+            color: #666;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .content-block li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .highlight-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .highlight-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: #856404;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="boarding-schools.html">私校插班</a> > 
+            <span>Cobham 私校插班</span>
+        </div>
+    </div>
+
+    <!-- 项目详情 -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <a href="boarding-schools.html" class="back-link">← 返回私校插班</a>
+            <h1 class="project-title">🏫 Cobham 私校插班项目</h1>
+            <p class="project-intro">
+                英国肯特郡 Cobham Hall 沉浸式插班，真正进入本地课堂，全年可选，校内寄宿，适合希望直升英国教育体系的中学生。
+            </p>
+            <!-- 基本信息 -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📍 项目地点</h4>
+                    <p>英国肯特郡 Cobham Hall 校园（距伦敦约30分钟）</p>
+                </div>
+                <div class="info-item">
+                    <h4>👥 招生年龄</h4>
+                    <p>中学阶段学生</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ 项目时间</h4>
+                    <p>全年可选（2周–多个学期）</p>
+                </div>
+                <div class="info-item">
+                    <h4>🏠 住宿</h4>
+                    <p>校内寄宿（全寄宿制）</p>
+                </div>
+                <div class="info-item">
+                    <h4>✓ 语言支持</h4>
+                    <p>每周8–10节EAL英语提升课程</p>
+                </div>
+            </div>
+            <div class="flash-price">
+                支持2周体验、1学期及以上，全年灵活插班
+            </div>
+            <!-- 项目概览 -->
+            <h2 class="section-title">项目概览</h2>
+            <div class="content-block">
+                <p>Cobham Hall 是英国历史悠久的私立寄宿学校，插班项目让中国学生真正进入本地课堂，与英国学生同班学习，沉浸式体验英式教育体系。全年开放，支持短期体验和长期插班，帮助学生提前适应英国学术与生活环境。</p>
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">项目特色</h3>
+                <ul>
+                    <li>真正插班本地课堂，非国际班、非旁听</li>
+                    <li>小班制教学，配EAL英语强化课程</li>
+                    <li>1v1英国学伴，帮助学习、生活与社交</li>
+                    <li>丰富兴趣拓展：足球、高尔夫、戏剧、艺术、音乐等</li>
+                    <li>结业获官方证书，优秀生可获推荐信</li>
+                </ul>
+                <div class="note">
+                    <strong>✓ 费用包含：</strong> 学费 · 校内住宿 · 三餐 · EAL英语课程 · 兴趣拓展 · 证书 · 推荐信 · 校园活动 · 保险 · 机场接送（预约）
+                </div>
+            </div>
+            <!-- 项目亮点 -->
+            <h2 class="section-title">项目亮点</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 真正插班本地课堂</h4>
+                    <p>与英国本地学生同班学习，沉浸式体验英式教育</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 沉浸式寄宿体验</h4>
+                    <p>吃住学全在校内，体验纯正英国私校生活</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 小班制+语言支持</h4>
+                    <p>每班仅少量国际生，配EAL英语强化课程</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 1v1英国学伴</h4>
+                    <p>配本地学生伙伴，帮助学习、生活与社交</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 官方证书+推荐信</h4>
+                    <p>结业获官方证书，优秀生可获推荐信</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 国际化环境</h4>
+                    <p>与25国学生共同学习，拓展视野</p>
+                </div>
+            </div>
+            <!-- 课程设置 -->
+            <h2 class="section-title">课程设置</h2>
+            <div class="content-block">
+                <ul>
+                    <li>与英国本地学生共同上课，全面适应英国课堂体系</li>
+                    <li>每周8–10节EAL英语提升课程</li>
+                    <li>Friday Enrichment Programme：足球/高尔夫/马术/戏剧/艺术/音乐/心理学/森林探索等兴趣拓展</li>
+                    <li>覆盖GCSE & A-Level体系，学科丰富（数学、物理、化学、经济、历史、心理学、计算机等）</li>
+                </ul>
+            </div>
+            <!-- 寄宿生活 -->
+            <h2 class="section-title">寄宿生活</h2>
+            <div class="content-block">
+                <ul>
+                    <li>校内寄宿公寓（男女分宿），舒适安全，专人管理</li>
+                    <li>周末组织伦敦及周边活动：购物、电影、主题公园、海滩、校内聚会等</li>
+                    <li>校园设施齐全：游泳池、健身房、网球场、体育馆、50+社团</li>
+                </ul>
+            </div>
+            <!-- 时间安排 -->
+            <h2 class="section-title">时间安排</h2>
+            <div class="content-block">
+                <ul>
+                    <li>全年开放，春季（1-3月）、夏季（4-6月）、秋季（9-12月）均可插班</li>
+                    <li>支持2周体验、1个月、1学期及以上</li>
+                </ul>
+            </div>
+            <!-- 为什么选择 -->
+            <h2 class="section-title">为什么选择Cobham项目？</h2>
+            <div class="content-block">
+                <p style="font-size: 1.1rem; color: #333; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Cobham Hall 插班项目让学生提前适应英国私校体系，提升英语和学术能力，增强未来留学竞争力，获得官方证书与推荐信，真正进入英国教育体系，而非短期体验。
+                </p>
+                <ul>
+                    <li>🎓 <strong>顶级名校背景：</strong> Cobham Hall 是英国历史悠久的寄宿制私校</li>
+                    <li>🌍 <strong>兼顾多个目标：</strong> 语言提升 + 学术适应 + 安全保障</li>
+                    <li>🛡️ <strong>成熟的寄宿体系：</strong> 完善的监管、高师生比、紧急支持</li>
+                    <li>📈 <strong>升学加分项：</strong> 为未来申请英国及世界名校增加竞争力</li>
+                    <li>💪 <strong>自信与独立：</strong> 在小班环境中充分发展自己、建立国际视野</li>
+                </ul>
+            </div>
+            <!-- 咨询按钮 -->
+            <!-- PDF项目手册 -->
+            <div class="section-card">
+                <h2 class="section-title">
+                    <span class="section-icon">📄</span>
+                    完整项目手册
+                </h2>
+                <p style="color: #666; margin-bottom: 1.5rem;">下方是Cobham私校插班项目的详细手册，包含所有项目信息与报名指南。</p>
+                <div style="width: 100%; height: 600px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
+                    <embed src="images/cobham-immersion-program.pdf#toolbar=1&navpanes=0&scrollbar=1" type="application/pdf" width="100%" height="100%">
+                </div>
+                <p style="color: #999; margin-top: 1rem; font-size: 0.9rem;">💡 提示：可在预览中滚动、缩放或下载PDF文件</p>
+            </div>
+            <div class="cta-section">
+                <h3>准备好了吗？</h3>
+                <p>立即咨询，获取专属方案。我们的团队将在24小时内为您提供详细建议。</p>
+                <button class="cta-button" onclick="openConsultationForm()">👉 免费咨询</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm">
+                <input type="text" placeholder="您的姓名 *" name="name" required>
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <textarea placeholder="咨询内容（如：\"对Cobham Hall项目感兴趣\"）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
