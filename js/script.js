@@ -1,13 +1,19 @@
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xzdkqgok';
+
 // 打开咨询表格模态框
 function openConsultationForm() {
     const modal = document.getElementById('consultationModal');
-    modal.style.display = 'block';
+    if (modal) {
+        modal.style.display = 'block';
+    }
 }
 
 // 关闭咨询表格模态框
 function closeConsultationForm() {
     const modal = document.getElementById('consultationModal');
-    modal.style.display = 'none';
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
 // 电话咨询处理
@@ -46,62 +52,27 @@ function showProjectDetails(projectType) {
 // 点击模态框外部关闭
 window.onclick = function(event) {
     const modal = document.getElementById('consultationModal');
-    if (event.target === modal) {
+    if (modal && event.target === modal) {
         modal.style.display = 'none';
     }
 }
 
-// 初始化 EmailJS
-emailjs.init("kFj9_Wfh6l0koZSi4");
-
-// 表格提交处理
+// 页面交互
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('consultationForm');
     if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // 获取表单数据
-            const name = this.querySelector('input[name="name"]').value;
-            const email = this.querySelector('input[name="email"]').value;
-            const phone = this.querySelector('input[name="phone"]').value;
-            const wechat = this.querySelector('input[name="wechat"]').value;
-            const content = this.querySelector('textarea[name="content"]').value;
-            
-            // 准备邮件参数
-            const templateParams = {
-                to_email: 'songyijing555@gmail.com',
-                from_email: email || '未提供',
-                client_name: name,
-                client_phone: phone || '未提供',
-                client_wechat: wechat,
-                client_message: content || '未提供',
-                reply_to: email || 'songyijing555@gmail.com'
-            };
-            
-            // 显示发送中提示
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = '发送中...';
-            submitBtn.disabled = true;
-            
-            // 使用 EmailJS 发送邮件
-            emailjs.send('service_dguz09a', 'template_4g1pufz', templateParams)
-                .then(function(response) {
-                    console.log('邮件发送成功:', response.status, response.text);
-                    alert('感谢您的咨询！🎉\n\n您的信息已成功提交。\n我们的顾问团队将在24小时内与您联系。\n\n📧 我们已将您的信息发送至 songyijing555@gmail.com');
-                    form.reset();
-                    closeConsultationForm();
-                })
-                .catch(function(error) {
-                    console.error('邮件发送失败:', error);
-                    alert('邮件发送失败，请重试或直接联系我们：\n📧 songyijing555@gmail.com\n📱 +447548312157\n微信：976029751');
-                })
-                .finally(function() {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                });
-        });
+        form.setAttribute('action', FORMSPREE_ENDPOINT);
+        form.setAttribute('method', 'POST');
+        form.setAttribute('target', '_blank');
+
+        // 纯 Formspree 原生提交，不做 JS 拦截。
+        if (!form.querySelector('input[name="_subject"]')) {
+            const subjectInput = document.createElement('input');
+            subjectInput.type = 'hidden';
+            subjectInput.name = '_subject';
+            subjectInput.value = '英国游学咨询表单';
+            form.appendChild(subjectInput);
+        }
     }
 
     // 平滑滚动导航链接

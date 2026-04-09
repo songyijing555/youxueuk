@@ -427,18 +427,17 @@
         <div class="modal-content">
             <span class="close" onclick="closeConsultationForm()">&times;</span>
             <h3>立即咨询</h3>
-            <form id="consultationForm">
-                <input type="text" placeholder="您的姓名 *" name="name" required>
+            <form id="consultationForm" action="https://formspree.io/f/xzdkqgok" method="POST" target="_blank">
+                <input type="text" placeholder="您的姓名 *" name="name">
                 <input type="email" placeholder="您的邮箱" name="email">
                 <input type="tel" placeholder="您的电话号码" name="phone">
-                <input type="text" placeholder="您的微信号 *" name="wechat" required>
+                <input type="text" placeholder="您的微信号 *" name="wechat">
                 <textarea placeholder="咨询内容（如：对费蒂斯官方夏校感兴趣）" name="content" rows="5"></textarea>
                 <button type="submit" class="btn-submit">提交咨询</button>
             </form>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=20260409"></script>
 </body>
 </html>
