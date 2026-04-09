@@ -65,16 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         form.setAttribute('method', 'POST');
         form.setAttribute('target', '_blank');
 
-        // 设置提交后跳转到网站自己的感谢页
-        if (!form.querySelector('input[name="_next"]')) {
-            const nextInput = document.createElement('input');
-            nextInput.type = 'hidden';
-            nextInput.name = '_next';
-            const base = window.location.href.replace(/\/[^/]*$/, '/');
-            nextInput.value = base + 'thank-you.html';
-            form.appendChild(nextInput);
-        }
-
         if (!form.querySelector('input[name="_subject"]')) {
             const subjectInput = document.createElement('input');
             subjectInput.type = 'hidden';
