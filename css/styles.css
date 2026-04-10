@@ -835,6 +835,49 @@ body {
     background-color: var(--primary-color);
 }
 
+.submission-toast {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1300;
+    min-width: 280px;
+    max-width: 420px;
+    padding: 0.9rem 0.9rem 0.9rem 1rem;
+    border-radius: 10px;
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.submission-toast.success {
+    background: linear-gradient(135deg, #047857 0%, #059669 100%);
+}
+
+.submission-toast.error {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+}
+
+.submission-toast.hide {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.submission-toast-close {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
 /* 响应式设计 */
 @media (max-width: 1024px) {
     .services-container {
@@ -979,5 +1022,13 @@ body {
         width: 95%;
         margin: 20% auto;
         padding: 1.5rem;
+    }
+
+    .submission-toast {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        min-width: auto;
+        max-width: none;
     }
 }

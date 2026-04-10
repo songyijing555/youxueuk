@@ -28,21 +28,104 @@
             color: #555;
             font-size: 14px;
         }
+        .toast {
+            margin-top: 16px;
+            border-radius: 8px;
+            padding: 12px 14px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: #fff;
+        }
+        .toast.success {
+            display: flex;
+            background: linear-gradient(135deg, #047857 0%, #059669 100%);
+        }
+        .toast.error {
+            display: flex;
+            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+        }
+        .toast button {
+            border: none;
+            background: transparent;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
     </style>
 </head>
 <body>
     <h1>Formspree 独立测试页</h1>
-    <p>这个页面不依赖站点脚本，只做原生表单提交。</p>
+    <p>这个页面不依赖站点脚本，使用异步提交并停留在当前页。</p>
 
-    <form action="https://formspree.io/f/xzdkqgok" method="POST" target="_blank">
+    <form id="formspreeTestForm" action="https://formspree.io/f/xzdkqgok" method="POST">
         <input type="hidden" name="_subject" value="英国游学咨询表单 - 独立测试页">
         <input type="text" name="name" placeholder="姓名" required>
         <input type="email" name="email" placeholder="邮箱">
         <input type="text" name="wechat" placeholder="微信号">
         <textarea name="message" rows="5" placeholder="咨询内容"></textarea>
-        <button type="submit">提交到 Formspree</button>
+        <button type="submit" id="submitBtn">提交到 Formspree</button>
     </form>
 
-    <p class="hint">提交后应打开新标签页。然后去 Formspree Dashboard 的 Submissions 看是否有记录。</p>
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <span id="toastMessage"></span>
+        <button type="button" id="toastClose" aria-label="关闭提示">×</button>
+    </div>
+
+    <p class="hint">提交后不跳转页面。可在 Formspree Dashboard 的 Submissions 查看记录。</p>
+
+    <script>
+        const form = document.getElementById('formspreeTestForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        const toastClose = document.getElementById('toastClose');
+
+        function showToast(type, message) {
+            toast.className = `toast ${type}`;
+            toastMessage.textContent = message;
+        }
+
+        function hideToast() {
+            toast.className = 'toast';
+            toastMessage.textContent = '';
+        }
+
+        toastClose.addEventListener('click', hideToast);
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            hideToast();
+
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = '提交中...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Submit failed');
+                }
+
+                form.reset();
+                showToast('success', '已成功提交，页面不会跳转。');
+            } catch (err) {
+                showToast('error', '提交失败，请稍后再试。');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,5 +1,40 @@
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xzdkqgok';
 
+function removeToast() {
+    const existingToast = document.querySelector('.submission-toast');
+    if (existingToast) {
+        existingToast.remove();
+    }
+}
+
+function showSubmissionToast(type, message) {
+    removeToast();
+
+    const toast = document.createElement('div');
+    toast.className = `submission-toast ${type}`;
+    toast.setAttribute('role', 'status');
+    toast.innerHTML = `
+        <span>${message}</span>
+        <button type="button" class="submission-toast-close" aria-label="关闭提示">×</button>
+    `;
+
+    const closeBtn = toast.querySelector('.submission-toast-close');
+    closeBtn.addEventListener('click', function() {
+        toast.remove();
+    });
+
+    document.body.appendChild(toast);
+
+    window.setTimeout(function() {
+        if (toast.parentNode) {
+            toast.classList.add('hide');
+            window.setTimeout(function() {
+                toast.remove();
+            }, 250);
+        }
+    }, 4500);
+}
+
 // 打开咨询表格模态框
 function openConsultationForm() {
     const modal = document.getElementById('consultationModal');
@@ -63,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (form) {
         form.setAttribute('action', FORMSPREE_ENDPOINT);
         form.setAttribute('method', 'POST');
-        form.setAttribute('target', '_blank');
 
         if (!form.querySelector('input[name="_subject"]')) {
             const subjectInput = document.createElement('input');
@@ -72,6 +106,43 @@ document.addEventListener('DOMContentLoaded', function() {
             subjectInput.value = '英国游学咨询表单';
             form.appendChild(subjectInput);
         }
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton ? submitButton.textContent : '';
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = '提交中...';
+            }
+
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Submit failed');
+                }
+
+                form.reset();
+                closeConsultationForm();
+                showSubmissionToast('success', '已成功提交，我们会尽快与您联系。');
+            } catch (error) {
+                showSubmissionToast('error', '提交失败，请稍后重试或直接电话咨询。');
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText || '提交咨询';
+                }
+            }
+        });
     }
 
     // 平滑滚动导航链接
