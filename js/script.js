@@ -51,9 +51,9 @@ function closeConsultationForm() {
     }
 }
 
-// 电话咨询处理
+// 微信咨询处理
 function openPhoneConsultation() {
-    alert('电话咨询热线: +86 400-XXXXXXX\n工作时间: 周一至周五 9:00-18:00');
+    alert('咨询微信：976029751');
 }
 
 // 显示项目详情
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeConsultationForm();
                 showSubmissionToast('success', '已成功提交，我们会尽快与您联系。');
             } catch (error) {
-                showSubmissionToast('error', '提交失败，请稍后重试或直接电话咨询。');
+                showSubmissionToast('error', '提交失败，请稍后重试或直接微信咨询。');
             } finally {
                 if (submitButton) {
                     submitButton.disabled = false;
