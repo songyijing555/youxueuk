@@ -170,12 +170,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 为"了解详情"按钮添加功能
+    // 让"了解详情"按钮与点击整张卡片保持一致
     const serviceButtons = document.querySelectorAll('.service-btn');
-    serviceButtons.forEach((btn, index) => {
-        btn.addEventListener('click', function() {
-            const projectTypes = ['short-term', 'boarding', 'summer-school'];
-            showProjectDetails(projectTypes[index]);
+    serviceButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const card = this.closest('.service-card');
+            if (card) {
+                e.preventDefault();
+                card.click();
+            }
         });
     });
 });
