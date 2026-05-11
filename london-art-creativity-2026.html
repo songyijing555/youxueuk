@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英伦艺术与创意工坊 2026 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-detail-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .project-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .project-intro {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        .info-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .info-item p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        .content-block {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        .content-block li {
+            padding: 0.7rem 0;
+            color: #666;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .content-block li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .highlight-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .highlight-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: var(--white);
+        }
+        .schedule-table th {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .schedule-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            color: #666;
+        }
+        .schedule-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: #856404;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            .schedule-table {
+                font-size: 0.9rem;
+            }
+            .schedule-table th, .schedule-table td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="short-term-details.html">短期游学</a> > 
+            <a href="short-term-middle-school.html">中小学生项目</a> > 
+            <span>英伦艺术与创意工坊</span>
+        </div>
+    </div>
+
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <a href="short-term-middle-school.html" class="back-link">← 返回中小学生项目</a>
+            <h1 class="project-title">🎨 英伦艺术与创意工坊 2026</h1>
+            <p class="project-intro">
+                在充满艺术与文化气息的伦敦，通过"艺术创作 + 戏剧表达 + 博物馆探索 + 国际交流"相结合的方式，让学生沉浸式体验英国艺术教育的独特魅力。
+            </p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📍 项目地点</h4>
+                    <p>英国伦敦及周边文化艺术城市</p>
+                </div>
+                <div class="info-item">
+                    <h4>👥 招生年龄</h4>
+                    <p>10–17岁，分龄段教学</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ 项目时间</h4>
+                    <p>2026年春假 / 暑假多期可选</p>
+                </div>
+                <div class="info-item">
+                    <h4>🎓 班级规模</h4>
+                    <p>国际化小班教学</p>
+                </div>
+                <div class="info-item">
+                    <h4>✓ 课程安排</h4>
+                    <p>艺术创作 + 戏剧工作坊 + 博物馆与画廊探索 + 创意展示活动</p>
+                </div>
+            </div>
+
+            <div class="flash-price">
+                惊爆价：2周39800（含住宿、课程、活动及英国游学期间费用）
+            </div>
+
+            <h2 class="section-title">项目概览</h2>
+            <div class="content-block">
+                <p>英伦艺术与创意工坊专为国际学生打造，通过沉浸式艺术体验与项目实践，让学生在真实文化环境中培养创造力与艺术表达能力。</p>
+                <p>学生将在伦敦丰富的艺术资源中学习与探索，参与戏剧创作、视觉艺术实践、音乐与舞台表达课程，并深入参访英国著名博物馆、美术馆与艺术空间。</p>
+                <p>项目不仅注重艺术技能，更强调想象力、审美能力、团队合作、自信表达与跨文化理解能力培养。</p>
+
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">课程特色</h3>
+                <ul>
+                    <li>沉浸式英伦艺术氛围，体验世界级文化资源</li>
+                    <li>戏剧、音乐与视觉艺术融合，激发创造力与表达力</li>
+                    <li>专业导师指导，强调实践创作与个人风格发展</li>
+                    <li>深度参访博物馆、画廊与艺术空间，拓展国际审美视野</li>
+                    <li>国际化小组合作与展示活动，培养沟通与团队协作能力</li>
+                    <li>住宿、课程、活动、游览等统一安排，家长更省心</li>
+                </ul>
+
+                <div class="note">
+                    <strong>✓ 费用包含：</strong> 艺术课程 · 创作材料 · 学习资料 · 住宿 · 每日餐饮 · 博物馆与画廊参访 · 戏剧与表演活动 · 保险 · 结业证书 · 成果展示活动 · 机场接送（预约）
+                </div>
+            </div>
+
+            <h2 class="section-title">项目一：艺术探索与创意表达营（10–13岁）</h2>
+            <div class="content-block">
+                <p><strong>本项目所有费用均已包含，具体班期与详情请联系顾问。</strong></p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 创意启发课程</h4>
+                    <p>通过绘画、拼贴、手工与视觉创作激发艺术兴趣与想象力</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 戏剧与表达训练</h4>
+                    <p>通过角色扮演与舞台活动提升表达能力与自信心</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 艺术馆深度体验</h4>
+                    <p>参访伦敦重要博物馆与画廊，培养观察力与审美能力</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 小组创作活动</h4>
+                    <p>通过团队艺术项目培养沟通与协作能力</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 国际化艺术环境</h4>
+                    <p>与来自不同国家的学生共同学习与创作</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">项目二：英伦艺术与戏剧工坊（14–17岁）</h2>
+            <div class="content-block">
+                <p><strong>本项目所有费用均已包含，具体班期与详情请联系顾问。</strong></p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 戏剧与舞台创作</h4>
+                    <p>体验英式戏剧教育模式，参与剧本、表演与舞台实践</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 视觉艺术与设计项目</h4>
+                    <p>学习创意表达、视觉构图与艺术思维训练</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 国际艺术文化探索</h4>
+                    <p>深入了解英国艺术、设计与文化传统</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 作品展示与成果发表</h4>
+                    <p>完成艺术作品、舞台演出或团队创意展示</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 提升综合艺术素养</h4>
+                    <p>培养创造力、表达力、审美能力与跨文化理解能力</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">课程与活动详情</h2>
+            <div class="content-block">
+                <h3 style="color: var(--secondary-color);">每日课程安排</h3>
+                <ul>
+                    <li><strong>艺术课程：</strong>涵盖视觉艺术、戏剧表演、创意表达与团队创作</li>
+                    <li><strong>创意工作坊：</strong>通过项目式学习完成艺术实践与作品创作</li>
+                    <li><strong>文化探索：</strong>参访博物馆、美术馆、剧院与伦敦艺术地标</li>
+                    <li><strong>团队活动：</strong>通过合作项目与舞台展示培养沟通与协作能力</li>
+                    <li><strong>成果展示：</strong>完成个人或团队艺术作品与表演展示</li>
+                </ul>
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">典型一天作息</h3>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>活动</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:00–08:30</td>
+                            <td>早餐</td>
+                        </tr>
+                        <tr>
+                            <td>09:00–12:00</td>
+                            <td>艺术课程 / 创意工作坊</td>
+                        </tr>
+                        <tr>
+                            <td>12:00–13:00</td>
+                            <td>午餐</td>
+                        </tr>
+                        <tr>
+                            <td>13:00–16:00</td>
+                            <td>博物馆参访 / 戏剧排练 / 艺术实践</td>
+                        </tr>
+                        <tr>
+                            <td>16:00–18:00</td>
+                            <td>团队创作 / 自由交流活动</td>
+                        </tr>
+                        <tr>
+                            <td>18:00–19:00</td>
+                            <td>晚餐</td>
+                        </tr>
+                        <tr>
+                            <td>19:00–21:00</td>
+                            <td>晚间表演活动 / 国际学生交流</td>
+                        </tr>
+                        <tr>
+                            <td>21:00–22:00</td>
+                            <td>洗漱休息 & 熄灯就寝</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="section-title">为什么选择英伦艺术与创意工坊？</h2>
+            <div class="content-block">
+                <p style="font-size: 1.1rem; color: #333; line-height: 1.8; margin-bottom: 1.5rem;">
+                    本项目不仅帮助学生提升艺术表达能力，更通过真实文化环境与国际交流体验，培养学生的创造力、审美能力与全球化视野。
+                </p>
+                <ul>
+                    <li>🎨 <strong>世界级艺术文化资源：</strong> 深度体验伦敦丰富的艺术与博物馆文化</li>
+                    <li>🎭 <strong>创意与表达全面提升：</strong> 戏剧、音乐与视觉艺术多元融合</li>
+                    <li>🌍 <strong>国际化艺术交流：</strong> 与全球学生共同创作与展示</li>
+                    <li>🖼️ <strong>博物馆与画廊深度探索：</strong> 建立更广阔的艺术审美与文化理解</li>
+                    <li>📈 <strong>培养未来核心素养：</strong> 创造力、表达能力、自信与团队合作同步提升</li>
+                    <li>💪 <strong>沉浸式成长体验：</strong> 在真实艺术氛围中激发个人潜力与国际视野</li>
+                </ul>
+            </div>
+
+            <div class="cta-section">
+                <h3>准备好了吗？</h3>
+                <p>立即咨询，获取专属方案。我们的团队将在24小时内为您提供详细建议。</p>
+                <button class="cta-button" onclick="openConsultationForm()">👉 免费咨询</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm" action="https://formspree.io/f/xzdkqgok" method="POST">
+                <input type="hidden" name="_subject" value="英伦艺术与创意工坊咨询">
+                <input type="text" placeholder="您的姓名 *" name="name">
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat">
+                <textarea placeholder="咨询内容（如：\"对英伦艺术与创意工坊感兴趣\"）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js?v=20260412"></script>
+</body>
+</html>
