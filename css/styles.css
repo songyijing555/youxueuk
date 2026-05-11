@@ -65,15 +65,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #e5e7eb;
 }
 
-.project-duration {
+.project-duration,
+.project-price {
     font-size: 0.9rem;
     color: var(--secondary-color);
     font-weight: 600;
 }
+
+.project-price {
+    color: var(--text-color);
+}
+
 
 .btn-detail {
     background-color: var(--secondary-color);
