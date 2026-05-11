@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英国寄宿学校体验营 2026 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .project-detail-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .project-intro {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .info-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .info-item p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        
+        .content-block {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .content-block li {
+            padding: 0.7rem 0;
+            color: #666;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .content-block li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .highlight-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .highlight-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: var(--white);
+        }
+        
+        .schedule-table th {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .schedule-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            color: #666;
+        }
+        
+        .schedule-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: #856404;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .schedule-table {
+                font-size: 0.9rem;
+            }
+            
+            .schedule-table th, .schedule-table td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="short-term-details.html">短期游学</a> > 
+            <a href="short-term-middle-school.html">中小学生项目</a> > 
+            <span>英国寄宿学校体验营</span>
+        </div>
+    </div>
+
+    <!-- 项目详情 -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <a href="short-term-middle-school.html" class="back-link">← 返回中小学生项目</a>
+            
+            <h1 class="project-title">🏫 英国寄宿学校体验营 2026</h1>
+            <p class="project-intro">
+                深入英国顶级寄宿学校，体验真正的英式学院生活。学生将在英国寄宿学校校园内与本地学生共同学习、生活与参与社团活动，在真实语言环境中自然提升英语表达能力、独立能力与跨文化沟通能力。
+            </p>
+
+            <!-- 基本信息 -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📍 项目地点</h4>
+                    <p>英国多所顶级寄宿学校校园内</p>
+                </div>
+                <div class="info-item">
+                    <h4>👥 招生年龄</h4>
+                    <p>11–17岁，分龄段安排</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ 项目时间</h4>
+                    <p>2026年春假 / 暑假多期可选</p>
+                </div>
+                <div class="info-item">
+                    <h4>🎓 班级规模</h4>
+                    <p>小班制教学，国际学生合理配比</p>
+                </div>
+                <div class="info-item">
+                    <h4>✓ 课程安排</h4>
+                    <p>英语课程 + 本地课堂体验 + 社团活动 + 校园生活沉浸</p>
+                </div>
+            </div>
+
+            <!-- 项目概览 -->
+            <h2 class="section-title">项目概览</h2>
+            <div class="content-block">
+                <p>英国寄宿学校体验营专为国际学生打造，学生将入住英国传统寄宿学校，与来自英国及全球各地的学生共同学习和生活。项目不仅注重英语能力提升，更强调独立性、社交能力、团队合作与国际化视野培养。</p>
+                
+                <p>学生将有机会体验英国学校真实的课堂氛围、House寄宿制度、体育文化与丰富社团活动，提前感受英国教育体系与校园节奏。</p>
+
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">课程特色</h3>
+                <ul>
+                    <li>纯正英国寄宿学校环境，沉浸式体验英式教育文化</li>
+                    <li>与本地学生共同学习生活，提高真实英语交流能力</li>
+                    <li>英语课程结合校园生活，在真实场景中自然开口表达</li>
+                    <li>丰富社团、体育与团队活动，培养沟通力与领导力</li>
+                    <li>专业师生团队与寄宿监管体系，安全有保障</li>
+                    <li>住宿、餐饮、课程、活动、游览等统一安排，家长更省心</li>
+                </ul>
+
+                <div class="note">
+                    <strong>✓ 费用包含：</strong> 英语课程 · 学习资料 · 校内住宿 · 每日三餐 · 校园活动 · 社团体验 · 体育课程 · 游览活动 · 保险 · 结业证书 · 机场接送（预约）
+                </div>
+            </div>
+
+            <!-- 项目一：春假寄宿体验营 -->
+            <h2 class="section-title">项目一：春假寄宿体验营（11–17岁）</h2>
+            
+            <div class="content-block">
+                <p><strong>本项目所有费用均已包含，具体班期与详情请联系顾问。</strong></p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 英国校园初体验</h4>
+                    <p>短期深入英国寄宿学校，快速感受真实英式学习与生活环境</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 英语沉浸环境</h4>
+                    <p>每天在课堂、宿舍、活动中自然使用英语，提升表达自信</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 本地文化融入</h4>
+                    <p>参与英国学生日常课程与社团活动，深入了解校园文化</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 安全陪护体系</h4>
+                    <p>寄宿老师与项目团队全程管理，帮助学生快速适应海外生活</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 留学前适应准备</h4>
+                    <p>帮助学生提前建立独立生活能力与国际沟通能力</p>
+                </div>
+            </div>
+
+            <!-- 项目二：暑假寄宿体验营 -->
+            <h2 class="section-title">项目二：暑假寄宿学校体验营（11–17岁）</h2>
+            
+            <div class="content-block">
+                <p><strong>本项目所有费用均已包含，具体班期与详情请联系顾问。</strong></p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 深度寄宿生活</h4>
+                    <p>完整体验英国寄宿学校日常作息、House文化与校园传统</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 本地课堂融合</h4>
+                    <p>进入真实课堂环境，与国际及本地学生共同学习互动</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 丰富社团活动</h4>
+                    <p>可参与体育、戏剧、音乐、辩论、艺术等多元校园活动</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 全面能力提升</h4>
+                    <p>不仅提升英语，更培养独立、自律、团队协作与领导能力</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 国际化成长经历</h4>
+                    <p>与来自全球的同龄学生建立友谊，拓展国际视野与跨文化理解能力</p>
+                </div>
+            </div>
+
+            <!-- 课程与活动 -->
+            <h2 class="section-title">课程与活动详情</h2>
+            
+            <div class="content-block">
+                <h3 style="color: var(--secondary-color);">每日课程安排</h3>
+                <ul>
+                    <li><strong>英语学习：</strong>强调口语表达、听力理解、课堂互动与实际运用</li>
+                    <li><strong>本地课堂体验：</strong>进入英国学校课程与学习环境，体验真实教学方式</li>
+                    <li><strong>社团与体育活动：</strong>参与英式校园传统活动，增强团队协作与社交能力</li>
+                    <li><strong>文化体验：</strong>安排英国城市、人文与历史主题游览，加深文化理解</li>
+                    <li><strong>寄宿生活：</strong>体验英国寄宿学校作息制度，培养独立与自律能力</li>
+                </ul>
+
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">典型一天作息</h3>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>活动</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:00–08:30</td>
+                            <td>早餐</td>
+                        </tr>
+                        <tr>
+                            <td>09:00–12:00</td>
+                            <td>英语课程 / 本地课堂体验</td>
+                        </tr>
+                        <tr>
+                            <td>12:00–13:00</td>
+                            <td>午餐</td>
+                        </tr>
+                        <tr>
+                            <td>13:00–15:30</td>
+                            <td>社团活动 / 体育课程</td>
+                        </tr>
+                        <tr>
+                            <td>15:30–18:00</td>
+                            <td>校园活动或外出游览</td>
+                        </tr>
+                        <tr>
+                            <td>18:00–19:00</td>
+                            <td>晚餐</td>
+                        </tr>
+                        <tr>
+                            <td>19:00–21:00</td>
+                            <td>晚间社交活动 / House活动</td>
+                        </tr>
+                        <tr>
+                            <td>21:00–22:00</td>
+                            <td>洗漱休息 & 熄灯就寝</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 为什么选择 -->
+            <h2 class="section-title">为什么选择英国寄宿学校体验营？</h2>
+            
+            <div class="content-block">
+                <p style="font-size: 1.1rem; color: #333; line-height: 1.8; margin-bottom: 1.5rem;">
+                    英国寄宿学校体验营不仅是一段海外学习经历，更是学生提前适应国际教育体系的重要成长机会。通过真实校园沉浸，学生能够在安全、有支持的环境中快速提升英语能力、独立能力与国际化视野。
+                </p>
+                
+                <ul>
+                    <li>🎓 <strong>真实英式教育体验：</strong> 深入英国寄宿学校，体验最纯正的学院文化与校园传统</li>
+                    <li>🌍 <strong>沉浸式语言环境：</strong> 在课堂、宿舍、活动中全天候自然使用英语</li>
+                    <li>🏫 <strong>提前适应留学生活：</strong> 帮助学生建立海外学习与生活信心</li>
+                    <li>🛡️ <strong>完善安全保障：</strong> 寄宿监管、师生陪护与紧急支持体系完善</li>
+                    <li>📈 <strong>提升综合竞争力：</strong> 国际化经历、跨文化能力与领导力全面提升</li>
+                    <li>💪 <strong>培养独立与自信：</strong> 在真实海外环境中成长，建立更成熟的自我管理能力</li>
+                </ul>
+            </div>
+
+            <!-- 咨询按钮 -->
+            <div class="cta-section">
+                <h3>准备好了吗？</h3>
+                <p>立即咨询，获取专属方案。我们的团队将在24小时内为您提供详细建议。</p>
+                <button class="cta-button" onclick="openConsultationForm()">👉 免费咨询</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm" action="https://formspree.io/f/xzdkqgok" method="POST">
+                <input type="hidden" name="_subject" value="英国寄宿学校体验营咨询">
+                <input type="text" placeholder="您的姓名 *" name="name">
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat">
+                <textarea placeholder="咨询内容（如："对英国寄宿学校体验营感兴趣"）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js?v=20260412"></script>
+</body>
+</html>
