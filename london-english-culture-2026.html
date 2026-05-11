@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伦敦英语强化与文化融合项目 2026 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .project-detail-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .project-intro {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .info-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .info-item p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        
+        .content-block {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .content-block li {
+            padding: 0.7rem 0;
+            color: #666;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .content-block li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .highlight-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .highlight-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: var(--white);
+        }
+        
+        .schedule-table th {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .schedule-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            color: #666;
+        }
+        
+        .schedule-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: #856404;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .flash-price {
+            background: linear-gradient(90deg, #ff8a00 0%, #ff2d55 100%);
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 20px rgba(255, 45, 85, 0.25);
+        }
+        
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .schedule-table {
+                font-size: 0.9rem;
+            }
+            
+            .schedule-table th, .schedule-table td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="short-term-details.html">短期游学</a> > 
+            <a href="short-term-middle-school.html">中小学生项目</a> > 
+            <span>伦敦英语强化与文化融合项目</span>
+        </div>
+    </div>
+
+    <!-- 项目详情 -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <a href="short-term-middle-school.html" class="back-link">← 返回中小学生项目</a>
+            
+            <h1 class="project-title">🌍 伦敦英语强化与文化融合项目 2026</h1>
+            <p class="project-intro">
+                在世界国际化程度最高的城市之一——伦敦，通过"英语学习 + 城市文化体验 + 国际交流"相结合的方式，帮助学生在真实环境中快速提升英语表达能力与跨文化沟通能力。
+            </p>
+
+            <!-- 基本信息 -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📍 项目地点</h4>
+                    <p>英国伦敦专业语言学校</p>
+                </div>
+                <div class="info-item">
+                    <h4>👥 招生年龄</h4>
+                    <p>12–18岁</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ 项目时间</h4>
+                    <p>2026年春假 / 暑假多期可选</p>
+                </div>
+                <div class="info-item">
+                    <h4>🎓 班级规模</h4>
+                    <p>国际化小班教学</p>
+                </div>
+                <div class="info-item">
+                    <h4>✓ 课程安排</h4>
+                    <p>英语强化课程 + 城市文化探索 + 社交互动活动 + 国际交流体验</p>
+                </div>
+            </div>
+
+            <div class="flash-price">
+                惊爆价：2周35000（含住宿、课程、活动及英国游学期间费用）
+            </div>
+
+            <!-- 项目概览 -->
+            <h2 class="section-title">项目概览</h2>
+            <div class="content-block">
+                <p>伦敦英语强化与文化融合项目专为国际学生打造，通过"课堂学习 + 城市沉浸 + 社交互动"的模式，让学生在真实语言环境中快速建立英语表达能力。</p>
+                
+                <p>项目课程由专业语言学校教师授课，重点提升口语、听力、发音、互动表达与实际交流能力。学生不仅在课堂中学习英语，更将在伦敦街头、博物馆、咖啡馆、文化地标与团队活动中自然运用英语。</p>
+
+                <p>项目强调"用英语生活"，帮助学生摆脱"只会做题、不敢开口"的学习模式。</p>
+
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">课程特色</h3>
+                <ul>
+                    <li>伦敦核心城市环境，沉浸式英语学习体验</li>
+                    <li>专业语言学校教学，注重口语与实际交流能力</li>
+                    <li>课堂学习结合真实城市任务，强化英语实际运用</li>
+                    <li>丰富文化活动与博物馆参访，深入了解英国文化</li>
+                    <li>国际学生共同学习交流，提升跨文化沟通能力</li>
+                    <li>住宿、课程、活动、游览等统一安排，家长更省心</li>
+                </ul>
+
+                <div class="note">
+                    <strong>✓ 费用包含：</strong> 英语课程 · 学习资料 · 住宿 · 每日餐饮 · 城市文化活动 · 博物馆与景点参访 · 社交活动 · 保险 · 结业证书 · 机场接送（预约）
+                </div>
+            </div>
+
+            <!-- 项目一：春假英语强化营 -->
+            <h2 class="section-title">项目一：春假英语强化营（12–18岁）</h2>
+            
+            <div class="content-block">
+                <p><strong>本项目所有费用均已包含，具体班期与详情请联系顾问。</strong></p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 英语快速提升</h4>
+                    <p>通过高频英语输入与输出环境，短时间提升口语表达能力</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 真实场景交流</h4>
+                    <p>在城市任务、日常互动与活动中自然使用英语</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 伦敦文化体验</h4>
+                    <p>深入探索伦敦历史、人文、艺术与国际化城市氛围</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 小班互动教学</h4>
+                    <p>强调课堂参与、讨论表达与团队合作，提高学习效率</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 国际学生交流</h4>
+                    <p>与来自不同国家的学生建立友谊，提升跨文化理解能力</p>
+                </div>
+            </div>
+
+            <!-- 项目二：暑假英语与文化融合课程 -->
+            <h2 class="section-title">项目二：暑假英语与文化融合课程（12–18岁）</h2>
+            
+            <div class="content-block">
+                <p><strong>本项目所有费用均已包含，具体班期与详情请联系顾问。</strong></p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>✓ 沉浸式语言环境</h4>
+                    <p>课堂、住宿与活动全面使用英语，建立英语思维与表达习惯</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 城市探索式学习</h4>
+                    <p>通过博物馆、文化地标与主题任务，把英语学习融入真实生活</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 社交与表达训练</h4>
+                    <p>系统提升沟通能力、公众表达与团队协作能力</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 国际化成长体验</h4>
+                    <p>体验伦敦多元文化环境，培养更开放的国际视野</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>✓ 自信与独立提升</h4>
+                    <p>帮助学生建立海外生活适应能力与独立解决问题能力</p>
+                </div>
+            </div>
+
+            <!-- 课程与活动 -->
+            <h2 class="section-title">课程与活动详情</h2>
+            
+            <div class="content-block">
+                <h3 style="color: var(--secondary-color);">每日课程安排</h3>
+                <ul>
+                    <li><strong>英语强化课程：</strong>重点提升口语、听力、发音、互动表达与实际沟通能力</li>
+                    <li><strong>实地任务学习：</strong>通过城市采访、小组挑战与情景任务强化英语运用</li>
+                    <li><strong>文化探索：</strong>参访伦敦博物馆、历史地标与文化区域，深入了解英国社会与文化</li>
+                    <li><strong>国际交流活动：</strong>与国际学生共同参与社交、讨论与团队合作活动</li>
+                    <li><strong>晚间活动：</strong>安排轻松社交与互动活动，让学生在真实环境中持续使用英语</li>
+                </ul>
+
+                <h3 style="color: var(--secondary-color); margin-top: 1.5rem;">典型一天作息</h3>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>活动</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:00–08:30</td>
+                            <td>早餐</td>
+                        </tr>
+                        <tr>
+                            <td>09:00–12:00</td>
+                            <td>英语强化课程</td>
+                        </tr>
+                        <tr>
+                            <td>12:00–13:00</td>
+                            <td>午餐</td>
+                        </tr>
+                        <tr>
+                            <td>13:00–16:00</td>
+                            <td>城市文化探索 / 博物馆参访 / 小组任务</td>
+                        </tr>
+                        <tr>
+                            <td>16:00–18:00</td>
+                            <td>自由交流活动 / 社交互动</td>
+                        </tr>
+                        <tr>
+                            <td>18:00–19:00</td>
+                            <td>晚餐</td>
+                        </tr>
+                        <tr>
+                            <td>19:00–21:00</td>
+                            <td>晚间活动 / 国际学生交流</td>
+                        </tr>
+                        <tr>
+                            <td>21:00–22:00</td>
+                            <td>洗漱休息 & 熄灯就寝</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 为什么选择 -->
+            <h2 class="section-title">为什么选择伦敦英语强化与文化融合项目？</h2>
+            
+            <div class="content-block">
+                <p style="font-size: 1.1rem; color: #333; line-height: 1.8; margin-bottom: 1.5rem;">
+                    本项目不仅帮助学生提升英语能力，更让学生真正进入国际化语言环境，在真实交流中建立英语自信与全球化视野。相比传统课堂式学习，学生将在"边生活、边体验、边交流"的过程中自然提升语言能力。
+                </p>
+                
+                <ul>
+                    <li>🎓 <strong>专业语言学校教学：</strong> 注重真实交流与口语表达能力提升</li>
+                    <li>🌍 <strong>伦敦国际化环境：</strong> 在世界级城市中沉浸式学习英语</li>
+                    <li>🗣️ <strong>强化英语实际运用：</strong> 在课堂与真实生活中持续输出英语</li>
+                    <li>🏛️ <strong>深度英国文化体验：</strong> 通过博物馆与城市探索理解英国文化</li>
+                    <li>📈 <strong>短期高效提升：</strong> 帮助学生快速提升口语、自信与沟通能力</li>
+                    <li>💪 <strong>国际化成长经历：</strong> 培养独立能力、跨文化理解与全球视野</li>
+                </ul>
+            </div>
+
+            <!-- 咨询按钮 -->
+            <div class="cta-section">
+                <h3>准备好了吗？</h3>
+                <p>立即咨询，获取专属方案。我们的团队将在24小时内为您提供详细建议。</p>
+                <button class="cta-button" onclick="openConsultationForm()">👉 免费咨询</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <!-- 咨询表格模态框 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm" action="https://formspree.io/f/xzdkqgok" method="POST">
+                <input type="hidden" name="_subject" value="伦敦英语强化与文化融合项目咨询">
+                <input type="text" placeholder="您的姓名 *" name="name">
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat">
+                <textarea placeholder="咨询内容（如："对伦敦英语强化与文化融合项目感兴趣"）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js?v=20260412"></script>
+</body>
+</html>
