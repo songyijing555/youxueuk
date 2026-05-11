@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目详情 - 英国游学网</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .project-detail-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+        .detail-content-block {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .detail-content-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .detail-content-block li {
+            padding: 0.4rem 0;
+        }
+        .detail-note {
+            background-color: #eef6ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.25rem 1.5rem;
+            border-radius: 10px;
+            color: #1f2937;
+            font-weight: 600;
+        }
+        .detail-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .detail-header {
+            margin-bottom: 2rem;
+        }
+        .detail-header .project-season {
+            margin-top: 0.5rem;
+            color: #64748b;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/UK Study Tour Network logo.png" alt="英国游学网logo" class="logo-image">
+                <h1>英国游学网</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#services">项目</a></li>
+                <li><a href="index.html#advantages">优势</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">咨询</a></li>
+            </ul>
+            <button class="consultation-btn-header" onclick="openConsultationForm()">咨询</button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <a href="index.html">首页</a> > 
+            <a href="short-term-details.html">短期游学</a> > 
+            <a href="short-term-middle-school.html">中小学生项目</a> > 
+            <span id="detailBreadcrumb">项目详情</span>
+        </div>
+    </div>
+
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <a href="short-term-middle-school.html" class="back-link">← 返回中小学生项目</a>
+            <div class="detail-header">
+                <h1 class="detail-title" id="detailTitle">项目详情</h1>
+                <p class="project-season" id="detailSeason"></p>
+            </div>
+            <div class="detail-content-block" id="detailContent"></div>
+            <div class="detail-note" id="detailNote"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 英国游学网. 版权所有</p>
+            <p>📍 英国本地服务团队 | 📞 +447548312157 | 📧 songyijing555@gmail.com | 咨询微信：976029751</p>
+        </div>
+    </footer>
+
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationForm()">&times;</span>
+            <h3>立即咨询</h3>
+            <form id="consultationForm" action="https://formspree.io/f/xzdkqgok" method="POST">
+                <input type="hidden" name="_subject" value="中小学生项目咨询">
+                <input type="text" placeholder="您的姓名 *" name="name">
+                <input type="email" placeholder="您的邮箱" name="email">
+                <input type="tel" placeholder="您的电话号码" name="phone">
+                <input type="text" placeholder="您的微信号 *" name="wechat">
+                <textarea placeholder="咨询内容（如：对项目感兴趣）" name="content" rows="5"></textarea>
+                <button type="submit" class="btn-submit">提交咨询</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function getQueryParam(name) {
+            return new URLSearchParams(window.location.search).get(name);
+        }
+
+        const projects = {
+            boarding: {
+                title: '英国寄宿学校体验营',
+                season: '春/暑假项目',
+                content: '<p>深入英国顶级寄宿学校，体验真实的学院生活。学生在寄宿校内与本地学生共同学习、生活与参加社团活动，提升语言能力与跨文化适应力。</p><p>本项目强调生活沉浸与课堂结合，通过真实校园日常帮助学生建立英语表达自信。</p><ul><li>真实寄宿学校生活</li><li>本地课程与社团活动</li><li>英语沉浸式学习环境</li><li>安全与师生陪护保障</li></ul>',
+                note: '价格：请咨询，课程细节与班期请联系顾问了解最新安排。'
+            },
+            oxbridge: {
+                title: '牛津/剑桥暑期课程',
+                season: '暑期项目',
+                content: '<p>进入牛津或剑桥校园体验学术与创造力课程。项目由顶尖导师设计，适合希望提前接触名校氛围、提升学术能力和英语表达的学生。</p><p>学生将在名校校园中参与课堂讨论、实验项目、文史探访与科研思维训练。</p><ul><li>名校导师授课</li><li>学术与创意项目结合</li><li>校园文化深度体验</li><li>结业证书与作品展示</li></ul>',
+                note: '价格：请咨询，班期与名校选择可根据学生背景安排。'
+            },
+            englishCulture: {
+                title: '英语强化与文化融合',
+                season: '春/暑假项目',
+                content: '<p>将语言训练与英国文化体验融合，帮助学生在课堂、城市游学与社交活动中自然运用英语。</p><p>本项目特别适合希望在短期内提升英语口语和交际表达的学生。</p><ul><li>专业语言强化课堂</li><li>博物馆与城市文化考察</li><li>实地任务与小组互动</li><li>国际学生交流机会</li></ul>',
+                note: '价格：请咨询，具体课程内容可根据学生水平进行个性化调整。'
+            },
+            stem: {
+                title: 'STEM科学探险营',
+                season: '暑期项目',
+                content: '<p>以动手实验和项目式学习为核心，带孩子探索英国科技创新教育，激发科学兴趣和逻辑思维。</p><p>学生将在实验室、科学中心与工坊中参与挑战任务，体验科学与工程的实际应用。</p><ul><li>实验室项目实操</li><li>科学中心与博物馆探访</li><li>跨学科创新任务</li><li>团队成果展示</li></ul>',
+                note: '价格：请咨询，适合对科学、工程和创意项目有兴趣的学生。'
+            },
+            art: {
+                title: '英伦艺术与创意工坊',
+                season: '春/暑假项目',
+                content: '<p>在伦敦艺术氛围中开展戏剧、音乐与视觉艺术课程，培养创造力、表达力和国际审美。</p><p>项目结合博物馆、画廊参访与创意实践，让学生体验英伦艺术教育的独特魅力。</p><ul><li>艺术与戏剧创作</li><li>博物馆与画廊深度游学</li><li>作品展示与表演</li><li>跨文化创意交流</li></ul>',
+                note: '价格：请咨询，项目适合喜欢艺术与表达的学生。'
+            },
+            leadership: {
+                title: '领导力与国际素养',
+                season: '暑期项目',
+                content: '<p>通过英语环境中的领导力训练与国际议题项目，提升学生的沟通、自信与全球化思维。</p><p>学生将在团队合作、问题解决与展示中锻炼综合素质，培养未来国际学习与交流能力。</p><ul><li>领导力工作坊</li><li>团队建设与挑战</li><li>国际议题讨论</li><li>跨文化合作体验</li></ul>',
+                note: '价格：请咨询，适合希望提升综合素养与国际视野的学生。'
+            }
+        };
+
+        const key = getQueryParam('project');
+        const project = projects[key];
+        if (!project) {
+            document.getElementById('detailTitle').textContent = '项目详情';
+            document.getElementById('detailContent').innerHTML = '<p>未找到该项目的详情。请返回中小学生项目页面重新选择。</p>';
+            document.getElementById('detailNote').textContent = '请咨询微信：976029751 了解更多项目信息。';
+            document.getElementById('detailBreadcrumb').textContent = '项目详情';
+        } else {
+            document.getElementById('detailTitle').textContent = project.title;
+            document.getElementById('detailSeason').textContent = project.season;
+            document.getElementById('detailContent').innerHTML = project.content;
+            document.getElementById('detailNote').textContent = project.note;
+            document.getElementById('detailBreadcrumb').textContent = project.title;
+        }
+    </script>
+
+    <script src="js/script.js?v=20260412"></script>
+</body>
+</html>
